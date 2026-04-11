@@ -1,133 +1,133 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Smartphone, Factory, Car, Radio, Home, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Lightbulb, Battery, Cpu, Radio, Heart, Building2, ArrowRight, CheckCircle2 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const solutions = [
   {
-    id: "consumer",
-    icon: Smartphone,
-    name: "消费电子",
-    nameEn: "Consumer Electronics",
+    id: "led-landscape",
+    icon: Lightbulb,
+    name: "LED景观照明",
+    nameEn: "LED Landscape Lighting",
     color: "from-cyan-500 to-blue-600",
-    tagline: "性能领先 · 超薄超轻 · 极致续航",
+    tagline: "电源线载波 · 点控全彩 · 智能联动",
     description:
-      "随着智能手机、平板电脑、真无线耳机、智能手表等消费电子产品快速迭代，对电源管理芯片的集成度、效率和体积提出了前所未有的要求。质能达为全球 TOP 10 消费电子品牌提供定制化电源管理方案，帮助客户实现产品的差异化竞争。",
+      "质能达基于自主研发的电源线载波通信技术，为智慧城市景观照明提供全链路解决方案。产品广泛应用于城市楼宇亮化、桥梁装饰照明、透明LED屏、户外景观灯带等场景，通过电力线实现信号与供电一体化传输，大幅降低布线成本，支持千级节点的全彩点控与智能联动。",
     challenges: [
-      "多功能高度集成，减少外围器件数量",
-      "追求超高转换效率，延长电池使用时间",
-      "超薄 SiP 封装方案，适配纤薄设计",
-      "低噪声设计，避免干扰无线通信模组",
+      "户外严苛环境下的长期耐久性与防护等级要求",
+      "大规模LED节点的色彩一致性与同步控制",
+      "千级以上节点的组网通信与集中管控",
+      "景观照明系统的整体能效优化与节能降耗",
     ],
-    products: ["QED-PMU9000 系列 PMIC", "QED-CHG650 快充芯片", "QED-LDO200 超低噪声 LDO"],
-    metrics: [
-      { value: "96%", label: "最高转换效率" },
-      { value: "5μA", label: "静态功耗" },
-      { value: "12路", label: "单芯片最大输出" },
-    ],
+    products: ["QED3110 系列电源线载波控制芯片", "QED512 系列LED驱动芯片", "QED7210 智能照明网关芯片"],
+    metrics: "256级灰度 / 10万小时寿命 / 1000+节点联控",
     image:
       "https://images.unsplash.com/photo-1704026437278-77f1db74859c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb2NoaXAlMjBjaXJjdWl0JTIwYm9hcmQlMjBjbG9zZSUyMHVwfGVufDF8fHx8MTc3NTY1MTgzMHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "iot",
-    icon: Home,
-    name: "工业物联网",
-    nameEn: "Industrial IoT",
+    id: "bms",
+    icon: Battery,
+    name: "新能源BMS管理",
+    nameEn: "Battery Management System",
     color: "from-emerald-500 to-teal-600",
-    tagline: "超低功耗 · 宽温工作 · 长期稳定",
+    tagline: "高集成 · 多节级联 · 安全可靠",
     description:
-      "物联网终端设备数量的爆炸式增长带动了对低功耗、高可靠性电源管理芯片的强劲需求。质能达深刻理解 IoT 设备从能量采集到协议通信的全链路需求，提供从 μA 级待机到秒级唤醒的完整能源管理方案。",
+      "质能达BMS电池管理芯片专为锂电池组管理而设计，广泛应用于新能源汽车动力电池、储能系统、电动工具等领域。芯片支持多节电池级联监测，集成高精度电压采样、温度监控、均衡管理及多重安全保护功能，为电池系统提供全方位的安全管理方案。",
     challenges: [
-      "电池供电设备需要数年的超长待机寿命",
-      "支持能量采集（太阳能/热能/振动能）",
-      "宽工作温度 -40℃~ 85℃ 工业标准",
-      "高抗干扰，适应复杂工业环境",
+      "多节电池串联的精确电压采样与状态监测",
+      "过充过放过流等多重安全保护机制",
+      "主动/被动均衡管理延长电池组寿命",
+      "宽温度范围下的稳定可靠工作",
     ],
-    products: ["QED-PMU7200 低功耗 PMIC", "QED-BC4200 高效 Buck", "QED-LDO1000 通用 LDO"],
-    metrics: [
-      { value: "<1μA", label: "超低待机电流" },
-      { value: "85℃", label: "最高工作温度" },
-      { value: "10年", label: "设计工作寿命" },
-    ],
+    products: ["QED1100 多节电池管理芯片", "QED1200 高精度BMS前端芯片"],
+    metrics: "20节级联 / ±25mV精度 / 多重保护",
     image:
       "https://images.unsplash.com/photo-1674269161229-165040284030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGNpdHklMjBJb1QlMjBjb25uZWN0ZWQlMjBkZXZpY2VzJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzU2NTE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "ev",
-    icon: Car,
-    name: "新能源汽车",
-    nameEn: "New Energy Vehicle",
-    color: "from-orange-500 to-amber-600",
-    tagline: "车规可靠 · 功能安全 · 高压支持",
+    id: "sensor",
+    icon: Cpu,
+    name: "传感器应用",
+    nameEn: "Sensor Applications",
+    color: "from-blue-500 to-indigo-600",
+    tagline: "高精度 · 国产替代 · 多场景",
     description:
-      "新能源汽车的快速渗透拉动了对车规级功率电子器件的旺盛需求。质能达的车规产品通过 AEC-Q100 Grade 0 认证和 ISO 26262 ASIL-B 功能安全认证，在严苛的车规环境下提供稳定可靠的性能表现。",
+      "质能达传感器系列芯片对标TI、英飞凌等国际大厂，实现高精度信号采集与处理的国产替代。产品覆盖工业控制、汽车电子、消费类电子等多个应用场景，提供温度、压力、电流、磁场等多种传感信号的精密检测方案，助力客户降低供应链风险。",
     challenges: [
-      "车规 AEC-Q100 Grade 0 (-40℃~150℃)",
-      "符合 ISO 26262 功能安全 ASIL-B 等级",
-      "高压总线 48V/800V 系统兼容",
-      "EMC/EMI 符合 CISPR 25 Class 5",
+      "16位及以上高精度信号采集与转换",
+      "工业级与车规级的长期可靠性保障",
+      "相比进口芯片的成本优势与供货稳定性",
+      "实现对TI/英飞凌等主流型号的Pin-to-Pin替代",
     ],
-    products: ["QED-BMS224 车规 BMS", "QED-MDR815 BLDC 驱动", "QED-CHG240 大功率充电 IC"],
-    metrics: [
-      { value: "AEC-Q100", label: "车规认证等级" },
-      { value: "ASIL-B", label: "功能安全等级" },
-      { value: "800V", label: "最高支持电压" },
-    ],
+    products: ["QED6100 高精度温度传感芯片", "QED6200 压力传感信号调理芯片", "QED6300 电流传感芯片", "QED6400 磁场传感芯片"],
+    metrics: "16-bit精度 / 对标TI/英飞凌 / 4大系列",
     image:
       "https://images.unsplash.com/photo-1763543007050-4dac73ffc67f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMHZlaGljbGUlMjBFViUyMGJhdHRlcnklMjBjaGFyZ2luZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc1NjUxODM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "industrial",
-    icon: Factory,
-    name: "工业控制",
-    nameEn: "Industrial Automation",
+    id: "mems-ai",
+    icon: Radio,
+    name: "超声波MEMS+AI",
+    nameEn: "Ultrasonic MEMS+AI",
     color: "from-violet-500 to-purple-600",
-    tagline: "高可靠 · 宽输入 · 隔离防护",
+    tagline: "MEMS+CMOS · AI算法 · 国内首创",
     description:
-      "工业自动化对电源管理器件的可靠性和稳定性要求极为严苛。质能达的工业级产品支持宽输入电压（9V~60V）和全隔离设计，广泛应用于 PLC、机器人、工业相机、伺服驱动器等核心工业设备。",
+      "质能达在国内率先实现超声波MEMS与CMOS工艺的单芯片集成，并融合自主研发的AI信号处理算法，打造新一代智能超声波传感芯片。产品可应用于距离测量、障碍物检测、手势识别、医疗超声成像等领域，拥有完全自主知识产权。",
     challenges: [
-      "宽输入电压范围 9V ~ 60V DC",
-      "支持 2kV 隔离耐压，防电气干扰",
-      "极端振动和冲击环境下稳定工作",
-      "MTBF 超过 50 万小时工业级可靠性",
+      "MEMS微机电结构的高良率制造工艺",
+      "AI算法与模拟前端的片上深度融合",
+      "传感器模组的极致小型化设计",
+      "超低功耗下的高灵敏度信号处理",
     ],
-    products: ["QED-MDR460 工业电机驱动", "QED-BC4200 工业 Buck", "QED-LDO2000 大电流 LDO"],
-    metrics: [
-      { value: "60V", label: "最高输入电压" },
-      { value: "50万h", label: "MTBF 可靠寿命" },
-      { value: "2kV", label: "隔离耐压等级" },
-    ],
+    products: ["MEMS超声波传感器系列芯片"],
+    metrics: "国内首创 / AI一体化 / 自主知识产权",
     image:
       "https://images.unsplash.com/photo-1748000970909-845f4aa144d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZW1pY29uZHVjdG9yJTIwd2FmZXIlMjBtYW51ZmFjdHVyaW5nJTIwY2xlYW4lMjByb29tfGVufDF8fHx8MTc3NTY1MTgzNHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "5g",
-    icon: Radio,
-    name: "5G 通信基础设施",
-    nameEn: "5G Communication Infrastructure",
-    color: "from-blue-500 to-indigo-600",
-    tagline: "高功率密度 · 超高效率 · 低延迟",
+    id: "medical",
+    icon: Heart,
+    name: "医疗电子",
+    nameEn: "Medical Electronics",
+    color: "from-pink-500 to-rose-600",
+    tagline: "高可靠 · 低功耗 · 精密检测",
     description:
-      "5G 基站的大规模部署对电源效率和功率密度提出了极高要求。质能达为 5G AAU、BBU 和 RRU 提供高效率的电源管理方案，帮助运营商降低 TCO（总拥有成本），同时满足严格的 EMC 合规要求。",
+      "质能达将传感器、MEMS超声波及电源管理芯片技术应用于医疗电子领域，为便携式医疗设备、超声诊断仪、患者监护仪等提供高可靠性的芯片解决方案。产品满足医疗级可靠性标准，具备超低噪声和低功耗特性，助力医疗设备的便携化与智能化发展。",
     challenges: [
-      "功率密度要求超高（100W/cm³）",
-      "宽负载范围效率要求 >95%",
-      "满足 ETSI 300 132-2 电源规范",
-      "低延迟快速瞬态响应 (<100ns)",
+      "医疗级产品的高可靠性与长寿命要求",
+      "精密生理信号采集的超低噪声设计",
+      "满足医疗器械法规与认证合规要求",
+      "医疗设备的小型化与便携化趋势",
     ],
-    products: ["QED-PMU9000 高集成 PMIC", "QED-BB2800 双向 Buck-Boost", "QED-BC4200 高频 Buck"],
-    metrics: [
-      { value: "97%", label: "峰值转换效率" },
-      { value: "<100ns", label: "瞬态响应时间" },
-      { value: "4MHz", label: "最高开关频率" },
-    ],
+    products: ["传感器 + MEMS超声波 + 电源管理芯片医疗组合方案"],
+    metrics: "医疗级可靠性 / 超低噪声 / 便携化方案",
     image:
       "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwZGF0YSUyMGNlbnRlciUyMHNlcnZlcnN8ZW58MXx8fHwxNzc1NjUxODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+  },
+  {
+    id: "smart-city",
+    icon: Building2,
+    name: "智慧城市",
+    nameEn: "Smart City",
+    color: "from-orange-500 to-amber-600",
+    tagline: "万物互联 · 智能管控 · 绿色节能",
+    description:
+      "质能达整合LED景观照明控制、传感器网络和能源管理等核心芯片技术，为智慧城市建设提供一体化解决方案。通过电源线载波通信实现万级节点的互联互通，结合传感器数据采集与智能分析，助力城市照明、环境监测、能耗管理等场景的数字化升级与绿色节能。",
+    challenges: [
+      "城市级大规模节点的部署与运维管理",
+      "多品类设备与异构网络的互联互通",
+      "系统整体能效优化与节能减排目标",
+      "远程故障诊断与智能化运维降本增效",
+    ],
+    products: ["LED照明控制 + 传感器网络 + 电源管理综合方案"],
+    metrics: "节能40% / 万级节点 / 远程管控",
+    image:
+      "https://images.unsplash.com/photo-1704026437278-77f1db74859c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb2NoaXAlMjBjaXJjdWl0JTIwYm9hcmQlMjBjbG9zZSUyMHVwfGVufDF8fHx8MTc3NTY1MTgzMHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
 ];
 
 export function Solutions() {
-  const [active, setActive] = useState("consumer");
+  const [active, setActive] = useState("led-landscape");
   const sol = solutions.find((s) => s.id === active)!;
 
   return (
@@ -149,8 +149,9 @@ export function Solutions() {
               解决方案
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
-              深耕五大核心赛道，以精准的行业理解与定制化产品，
-              为客户提供从芯片选型到系统级参考设计的完整解决方案。            </p>
+              深耕六大核心应用领域，以自主研发的LED驱动、BMS管理、传感器、MEMS+AI等芯片技术，
+              为客户提供从芯片选型到系统级参考设计的完整解决方案。
+            </p>
           </motion.div>
         </div>
       </section>
@@ -206,15 +207,10 @@ export function Solutions() {
                 <p className="text-slate-600 leading-relaxed text-lg mb-8">{sol.description}</p>
 
                 {/* Key Metrics */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                  {sol.metrics.map((m, i) => (
-                    <div key={i} className="p-4 bg-white shadow-sm rounded-2xl border border-slate-200 text-center">
-                      <div className={`text-2xl font-black bg-gradient-to-r ${sol.color} bg-clip-text text-transparent mb-1`}>
-                        {m.value}
-                      </div>
-                      <div className="text-xs text-slate-500">{m.label}</div>
-                    </div>
-                  ))}
+                <div className="mb-8 p-4 bg-white shadow-sm rounded-2xl border border-slate-200 text-center">
+                  <div className={`text-lg font-black bg-gradient-to-r ${sol.color} bg-clip-text text-transparent`}>
+                    {sol.metrics}
+                  </div>
                 </div>
 
                 {/* Challenges */}
@@ -275,11 +271,11 @@ export function Solutions() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-black mb-3 text-slate-900">五大应用领域</h2>
+            <h2 className="text-3xl md:text-4xl font-black mb-3 text-slate-900">六大应用领域</h2>
             <p className="text-slate-500">点击查看各行业详细解决方案</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {solutions.map((s, i) => (
               <motion.button
                 key={s.id}
@@ -324,7 +320,8 @@ export function Solutions() {
           >
             <h2 className="text-3xl font-black mb-4 text-slate-900">没有找到您需要的方案？</h2>
             <p className="text-slate-500 mb-8">
-              质能达提供定制化 ASIC 设计服务，我们的专家团队将为您量身定制解决方案。            </p>
+              质能达提供定制化 ASIC 设计服务，我们的专家团队将为您量身定制解决方案。
+            </p>
             <a
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:opacity-90 transition-all"

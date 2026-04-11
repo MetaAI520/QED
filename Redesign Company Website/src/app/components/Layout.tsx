@@ -9,23 +9,24 @@ const navLinks = [
     label: "产品中心",
     path: "/products",
     children: [
-      { path: "/products", label: "电源管理芯片 (PMIC)" },
-      { path: "/products", label: "DC-DC 转换器" },
-      { path: "/products", label: "LDO 线性稳压器" },
-      { path: "/products", label: "电池管理芯片" },
-      { path: "/products", label: "充电管理芯片" },
-      { path: "/products", label: "电机驱动芯片" },
+      { path: "/products", label: "LED芯片" },
+      { path: "/products", label: "BMS芯片" },
+      { path: "/products", label: "LCD芯片" },
+      { path: "/products", label: "Power芯片" },
+      { path: "/products", label: "传感器芯片" },
+      { path: "/products", label: "超声波MEMS+CMOS" },
     ],
   },
   {
     label: "解决方案",
     path: "/solutions",
     children: [
-      { path: "/solutions", label: "消费电子" },
-      { path: "/solutions", label: "物联网" },
-      { path: "/solutions", label: "新能源汽车" },
-      { path: "/solutions", label: "工业控制" },
-      { path: "/solutions", label: "5G 通信" },
+      { path: "/solutions", label: "LED景观照明" },
+      { path: "/solutions", label: "新能源BMS管理" },
+      { path: "/solutions", label: "传感器应用" },
+      { path: "/solutions", label: "超声波MEMS+AI" },
+      { path: "/solutions", label: "医疗电子" },
+      { path: "/solutions", label: "智慧城市" },
     ],
   },
   { path: "/rnd", label: "研发创新" },
@@ -36,19 +37,20 @@ const navLinks = [
 
 const footerLinks = {
   产品中心: [
-    { label: "电源管理芯片", path: "/products" },
-    { label: "DC-DC 转换器", path: "/products" },
-    { label: "LDO 线性稳压器", path: "/products" },
-    { label: "电池管理芯片", path: "/products" },
-    { label: "充电管理芯片", path: "/products" },
-    { label: "电机驱动芯片", path: "/products" },
+    { label: "LED芯片", path: "/products" },
+    { label: "BMS芯片", path: "/products" },
+    { label: "LCD芯片", path: "/products" },
+    { label: "Power芯片", path: "/products" },
+    { label: "传感器芯片", path: "/products" },
+    { label: "超声波MEMS+CMOS", path: "/products" },
   ],
   解决方案: [
-    { label: "消费电子", path: "/solutions" },
-    { label: "物联网", path: "/solutions" },
-    { label: "新能源汽车", path: "/solutions" },
-    { label: "工业控制", path: "/solutions" },
-    { label: "5G 通信", path: "/solutions" },
+    { label: "LED景观照明", path: "/solutions" },
+    { label: "新能源BMS管理", path: "/solutions" },
+    { label: "传感器应用", path: "/solutions" },
+    { label: "超声波MEMS+AI", path: "/solutions" },
+    { label: "医疗电子", path: "/solutions" },
+    { label: "智慧城市", path: "/solutions" },
   ],
   公司: [
     { label: "关于质能达", path: "/about" },
@@ -252,7 +254,7 @@ export function Layout() {
               <div className="space-y-2 text-sm text-slate-400">
                 <div className="flex items-center gap-2">
                   <Phone size={13} />
-                  +86 (0755) 8888 8888
+                  0755-2893-8531
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail size={13} />
@@ -260,7 +262,7 @@ export function Layout() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin size={13} />
-                  深圳市南山区科技园南区A栋
+                  深圳龙华区观湖街道鹭湖社区观盛五路科姆龙C栋12层
                 </div>
               </div>
               <div className="flex items-center gap-3 mt-5">

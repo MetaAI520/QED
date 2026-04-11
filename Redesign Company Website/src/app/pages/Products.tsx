@@ -1,194 +1,194 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Zap, Cpu, Gauge, Battery, PlugZap, Radio, CheckCircle2, ArrowRight } from "lucide-react";
+import { Zap, Cpu, Lightbulb, Battery, Monitor, Radio, CheckCircle2, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const categories = [
-  { id: "pmic", label: "PMIC", labelFull: "电源管理芯片" },
-  { id: "dcdc", label: "DC-DC", labelFull: "DC-DC 转换器" },
-  { id: "ldo", label: "LDO", labelFull: "LDO 稳压器" },
-  { id: "bms", label: "BMS", labelFull: "电池管理" },
-  { id: "charger", label: "充电管理", labelFull: "充电管理芯片" },
-  { id: "motor", label: "电机驱动", labelFull: "电机驱动芯片" },
+  { id: "led", label: "LED", labelFull: "LED芯片" },
+  { id: "bms", label: "BMS", labelFull: "BMS芯片" },
+  { id: "lcd", label: "LCD", labelFull: "LCD芯片" },
+  { id: "power", label: "Power", labelFull: "Power芯片" },
+  { id: "sensor", label: "传感器", labelFull: "传感器芯片" },
+  { id: "mems", label: "MEMS", labelFull: "超声波MEMS+CMOS" },
 ];
 
 const productLines = [
   {
-    id: "pmic",
-    icon: Zap,
-    name: "电源管理芯片",
-    nameEn: "Power Management IC (PMIC)",
+    id: "led",
+    icon: Lightbulb,
+    name: "LED芯片",
+    nameEn: "LED Chip IC",
     color: "from-cyan-500 to-blue-600",
     description:
-      "质能达 PMIC 系列高度集成多路电压轨，广泛应用于智能手机、平板电脑、可穿戴设备等消费电子产品。凭借先进的 BCD 工艺与低静态电流设计，为终端产品提供稳定、高效的电源管理方案。",
+      "质能达 LED 芯片系列采用电源线载波技术，支持点控全彩 RGB，广泛应用于景观照明、建筑亮化、透明屏、装饰灯带等场景。产品具备单线传输协议、低功耗设计和多种封装形式。",
     features: [
-      "单芯片最多 12 路独立电压轨",
-      "静态电流低至 5μA，超长续航",
-      "集成过压/欠压/过温多重保护",
-      "支持 MIPI I3C / I2C 动态调压",
-      "通过 AEC-Q100 Grade B 车规认证",
-      "支持 -40℃~ 125℃ 工作温度",
+      "电源线载波单线传输协议",
+      "点控全彩 RGB 256 级灰度",
+      "宽工作电压 3.3V~5V",
+      "低功耗待机设计",
+      "支持 COB/DIP/SMD 多种封装",
+      "10 万小时超长使用寿命",
     ],
     specs: [
-      { label: "输入电压范围", value: "2.5V ~ 6.5V" },
-      { label: "输出电流", value: "最高 8A/路" },
-      { label: "转换效率", value: "最高 96%" },
-      { label: "待机功耗", value: "< 5μA" },
+      { label: "工作电压", value: "3.3V~5V" },
+      { label: "通信速率", value: "800Kbps" },
+      { label: "灰度等级", value: "256级" },
+      { label: "封装形式", value: "COB/DIP/SMD" },
     ],
     products: [
-      { model: "QED-PMU9000", desc: "12 路输出，适用旗舰手机" },
-      { model: "QED-PMU7200", desc: "8 路输出，IoT 低功耗平台" },
-      { model: "QED-PMU5100", desc: "5 路输出，通用消费类" },
+      { model: "QED3110", desc: "点控 RGB 全彩 IC，铜线系列" },
+      { model: "QED512", desc: "DMX512 协议 LED 驱动芯片" },
+      { model: "QED7210", desc: "高集成度景观照明 IC" },
     ],
     image:
+
       "https://images.unsplash.com/photo-1759159347934-1cdc38dd1f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZW1pY29uZHVjdG9yJTIwY2hpcCUyMHRlY2hub2xvZ3klMjBhYnN0cmFjdCUyMGJsdWV8ZW58MXx8fHwxNzc1NjUxODIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "dcdc",
-    icon: Cpu,
-    name: "DC-DC 转换器",
-    nameEn: "DC-DC Converter",
-    color: "from-blue-500 to-indigo-600",
+    id: "bms",
+    icon: Battery,
+    name: "BMS芯片",
+    nameEn: "BMS Chip",
+    color: "from-emerald-500 to-teal-600",
     description:
-      "质能达 DC-DC 系列包含 Buck、Boost、Buck-Boost 和 SEPIC 等多种拓扑结构，宽输入电压范围覆盖从便携式设备到工业级应用，以业界领先的转换效率和集成度赢得市场认可。",
+      "质能达 BMS 芯片系列为新能源锂电池管理提供核心半导体方案。独创单颗高集成度 BMS 控制芯片，支持 2-20 节电池级联管理，实现多级保护及电荷平衡，极少外围元器件。",
     features: [
-      "Buck/Boost/Buck-Boost 全拓扑覆盖",
-      "工作频率高达 4MHz，缩小外围尺寸",
-      "轻载效率优化，最高效率 97%",
-      "内置软启动，防止浪涌电流",
-      "可编程频率与输出电压",
-      "WLCSP/QFN 超小封装选项",
+      "支持 2~20 节电池级联管理",
+      "过压/过流/过热多重保护",
+      "自动电荷平衡功能",
+      "单芯片高集成度设计",
+      "极少外围元器件",
+      "支持多种锂电池类型",
     ],
     specs: [
-      { label: "输入电压", value: "2.7V ~ 40V" },
-      { label: "输出电流", value: "最高 20A" },
-      { label: "开关频率", value: "200kHz ~ 4MHz" },
-      { label: "最高效率", value: "97%" },
+      { label: "支持电池节数", value: "2~20节" },
+      { label: "均衡电流", value: "最高 200mA" },
+      { label: "保护精度", value: "±25mV" },
+      { label: "通信接口", value: "I2C/SMBus" },
     ],
     products: [
-      { model: "QED-BC4200", desc: "4A 同步 Buck，高集成度" },
-      { model: "QED-BST3600", desc: "3A 升压，适用于 LED 背光" },
-      { model: "QED-BB2800", desc: "双向 Buck-Boost，电池系统" },
+      { model: "QED1100", desc: "多节 BMS 管理芯片" },
+      { model: "QED1200", desc: "高集成度 BMS 方案" },
     ],
     image:
       "https://images.unsplash.com/photo-1704026437278-77f1db74859c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb2NoaXAlMjBjaXJjdWl0JTIwYm9hcmQlMjBjbG9zZSUyMHVwfGVufDF8fHx8MTc3NTY1MTgzMHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "ldo",
-    icon: Gauge,
-    name: "LDO 线性稳压器",
-    nameEn: "LDO Linear Regulator",
+    id: "lcd",
+    icon: Monitor,
+    name: "LCD芯片",
+    nameEn: "LCD Driver IC",
     color: "from-violet-500 to-purple-600",
     description:
-      "质能达 LDO 系列以超低噪声和超高 PSRR 著称，广泛应用于 RF 收发器、ADC/DAC、时钟电路等对电源噪声极为敏感的精密模拟电路场景，提供超清洁的供电环境。",
+      "质能达 LCD 芯片系列提供高性能液晶显示驱动方案，适用于段码屏、点阵屏、TFT 面板等多种显示应用场景，具备低功耗、高对比度和灵活接口配置。",
     features: [
-      "噪声低至 4μVrms (10Hz-100kHz)",
-      "PSRR > 80dB @1kHz，优秀抑制能力",
-      "压差低至 80mV，最大化输出电压",
-      "支持输出电容小至 1μF",
-      "快速瞬态响应，稳定负载切换",
-      "集成使能控制和软启动功能",
+      "支持段码/点阵/TFT 多种面板",
+      "低功耗休眠模式",
+      "高对比度显示输出",
+      "SPI/I2C 灵活接口",
+      "内置升压电路",
+      "宽工作温度范围",
     ],
     specs: [
-      { label: "输入电压范围", value: "1.5V ~ 20V" },
-      { label: "输出电流", value: "50mA ~ 2A" },
-      { label: "输出噪声", value: "< 4μVrms" },
-      { label: "PSRR", value: "> 80dB" },
+      { label: "驱动类型", value: "段码/点阵/TFT" },
+      { label: "工作电压", value: "2.5V~5.5V" },
+      { label: "接口类型", value: "SPI/I2C" },
+      { label: "工作温度", value: "-40℃~85℃" },
     ],
     products: [
-      { model: "QED-LDO200", desc: "200mA 超低噪声，RF 专用" },
-      { model: "QED-LDO1000", desc: "1A 高精度，通用型" },
-      { model: "QED-LDO2000", desc: "2A 大电流，数字供电" },
+      { model: "QED8001", desc: "段码 LCD 驱动 IC" },
+      { model: "QED8201", desc: "点阵 LCD 驱动 IC" },
+      { model: "QED8301", desc: "TFT 面板驱动 IC" },
     ],
     image:
       "https://images.unsplash.com/photo-1774542916400-77f2dd1744d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dlciUyMG1hbmFnZW1lbnQlMjBlbmVyZ3klMjBlZmZpY2llbmN5JTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzU2NTE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "bms",
-    icon: Battery,
-    name: "电池管理芯片",
-    nameEn: "Battery Management System (BMS)",
-    color: "from-emerald-500 to-teal-600",
+    id: "power",
+    icon: Zap,
+    name: "Power芯片",
+    nameEn: "Power IC",
+    color: "from-orange-500 to-amber-600",
     description:
-      "质能达 BMS 系列覆盖单节至多节锂电池/磷酸铁锂系统，集成精准电量计量、过充/过放/短路保护及均衡功能，广泛应用于消费类电子、电动工具及新能源汽车电池管理系统。",
+      "质能达 Power 芯片系列覆盖稳压、转换、保护等电源管理全链路，为各类电子设备提供稳定高效的供电方案，产品具备高转换效率和完善的保护机制。",
     features: [
-      "支持 1~24 节串联电池组管理",
-      "电量计量精度优于 ±1%",
-      "过充/过放/过流/短路全保护",
-      "主被动均衡双模，延长电池寿命",
-      "支持 SOC/SOH/SOP 实时估算",
-      "通过 ISO 26262 ASIL-B 功能安全",
+      "高转换效率 >95%",
+      "完善的过压/过流保护",
+      "宽输入电压范围",
+      "低静态电流设计",
+      "内置软启动功能",
+      "多种封装选项",
     ],
     specs: [
-      { label: "支持电池串数", value: "1 ~ 24 节" },
-      { label: "电量计量精度", value: "±1%" },
-      { label: "均衡电流", value: "最高 500mA" },
-      { label: "通信接口", value: "I2C / SMBus / CAN" },
+      { label: "输入电压", value: "3V~40V" },
+      { label: "输出电流", value: "最高 3A" },
+      { label: "转换效率", value: ">95%" },
+      { label: "静态电流", value: "<10μA" },
     ],
     products: [
-      { model: "QED-BMS101", desc: "单节锂电池保护 IC" },
-      { model: "QED-BMS416", desc: "4 节电池组，电动工具专用" },
-      { model: "QED-BMS224", desc: "24 节高压 BMS，车规级" },
+      { model: "QED431", desc: "精密可调并联稳压器" },
+      { model: "QED7100", desc: "高效同步降压转换器" },
+      { model: "QED7200", desc: "宽输入升压转换器" },
     ],
     image:
       "https://images.unsplash.com/photo-1763543007050-4dac73ffc67f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMHZlaGljbGUlMjBFViUyMGJhdHRlcnklMjBjaGFyZ2luZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc1NjUxODM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "charger",
-    icon: PlugZap,
-    name: "充电管理芯片",
-    nameEn: "Charger IC",
-    color: "from-orange-500 to-amber-600",
+    id: "sensor",
+    icon: Cpu,
+    name: "传感器芯片",
+    nameEn: "Sensor IC",
+    color: "from-blue-500 to-indigo-600",
     description:
-      "质能达充电管理芯片全面支持 USB-C PD 3.1、QC 5.0 及无线充电（Qi 2.0），具备高集成度与安全充电算法，广泛应用于智能手机、真无线耳机、智能穿戴等快充产品。",
+      "质能达传感器芯片系列对标德州仪器、英飞凌等国际品牌，实现国产替代。产品覆盖温度、湿度、压力、光照等多种传感应用，具备高精度和高可靠性。",
     features: [
-      "USB-C PD 3.1 & QC 5.0 双协议支持",
-      "无线充电 Qi 2.0 标准兼容",
-      "集成 OVP/OCP/NTC 三重安全保护",
-      "智能温控充电算法，延长电池寿命",
-      "支持正向/反向充电（OTG）",
-      "效率高达 95%，发热量极低",
+      "16-bit 高精度 ADC",
+      "对标 TI/英飞凌国际品牌",
+      "多种传感类型覆盖",
+      "低功耗设计",
+      "数字接口输出",
+      "工业级可靠性",
     ],
     specs: [
-      { label: "最高充电功率", value: "240W (PD 3.1)" },
-      { label: "无线充电功率", value: "最高 15W Qi" },
-      { label: "充电效率", value: "最高 95%" },
-      { label: "支持协议", value: "PD / QC / AFC / FCP" },
+      { label: "ADC 精度", value: "16-bit" },
+      { label: "功耗", value: "<100μA" },
+      { label: "接口", value: "I2C/SPI" },
+      { label: "工作温度", value: "-40℃~125℃" },
     ],
     products: [
-      { model: "QED-CHG650", desc: "65W PD 单口快充方案" },
-      { model: "QED-WLC15", desc: "15W 无线充电发射 IC" },
-      { model: "QED-CHG240", desc: "240W 超高功率充电" },
+      { model: "QED6100", desc: "高精度温度传感器 IC" },
+      { model: "QED6200", desc: "数字湿度传感器 IC" },
+      { model: "QED6300", desc: "压力传感器 IC" },
+      { model: "QED6400", desc: "环境光传感器 IC" },
     ],
     image:
       "https://images.unsplash.com/photo-1674269161229-165040284030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGNpdHklMjBJb1QlMjBjb25uZWN0ZWQlMjBkZXZpY2VzJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzU2NTE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    id: "motor",
+    id: "mems",
     icon: Radio,
-    name: "电机驱动芯片",
-    nameEn: "Motor Driver IC",
+    name: "超声波MEMS+CMOS",
+    nameEn: "Ultrasonic MEMS+CMOS",
     color: "from-pink-500 to-rose-600",
     description:
-      "质能达电机驱动芯片覆盖 BLDC、步进电机和有刷电机全类型，集成全 H 桥驱动与保护电路，广泛应用于工业机器人、无人机、智能家居电机及工业自动化设备。",
+      "质能达在国内率先实现超声波 MEMS 与 CMOS 工艺的单芯片集成，融合自主研发的 AI 信号处理算法，打造新一代智能超声波传感芯片。产品可应用于距离测量、障碍物检测、手势识别等领域。",
     features: [
-      "支持 BLDC / 步进 / 有刷电机全类型",
-      "集成全 H 桥驱动，无需外部 MOSFET",
-      "FOC 无感矢量控制，转矩波动 <1%",
-      "低 EMI 设计，符合 CISPR 22 B 级",
-      "内置过流/过温/欠压全保护",
-      "SPI/PWM/I2C 多接口可选",
+      "MEMS+CMOS 单芯片集成",
+      "自主 AI 信号处理算法",
+      "国内首创技术方案",
+      "超低功耗设计",
+      "高精度距离测量",
+      "完全自主知识产权",
     ],
     specs: [
-      { label: "驱动电压", value: "8V ~ 60V" },
-      { label: "最大相电流", value: "最高 15A" },
-      { label: "支持电机类型", value: "BLDC / 步进 / 有刷" },
-      { label: "控制接口", value: "SPI / PWM / I2C" },
+      { label: "测量范围", value: "2cm~5m" },
+      { label: "精度", value: "±1mm" },
+      { label: "功耗", value: "<5mW" },
+      { label: "接口", value: "I2C/UART" },
     ],
     products: [
-      { model: "QED-MDR330", desc: "3A 步进电机驱动" },
-      { model: "QED-MDR815", desc: "15A BLDC 三相全驱动" },
-      { model: "QED-MDR460", desc: "60V 工业级大功率驱动" },
+      { model: "QED-MEMS100", desc: "超声波测距传感器芯片" },
+      { model: "QED-MEMS200", desc: "AI 手势识别传感器芯片" },
     ],
     image:
       "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwZGF0YSUyMGNlbnRlciUyMHNlcnZlcnN8ZW58MXx8fHwxNzc1NjUxODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -196,7 +196,7 @@ const productLines = [
 ];
 
 export function Products() {
-  const [activeId, setActiveId] = useState("pmic");
+  const [activeId, setActiveId] = useState("led");
   const activeProduct = productLines.find((p) => p.id === activeId)!;
 
   return (
@@ -218,8 +218,8 @@ export function Products() {
               产品中心
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
-              六大产品线、1000+ 型号覆盖电源管理全场景，
-              以卓越的模拟设计功底和持续创新的产品矩阵，为客户提供最优方案。            </p>
+              六大产品线覆盖 LED、BMS、LCD、Power、传感器及 MEMS 全场景，以自主芯片技术为客户提供最优方案。
+            </p>
           </motion.div>
         </div>
       </section>

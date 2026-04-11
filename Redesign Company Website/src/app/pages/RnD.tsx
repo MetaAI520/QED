@@ -69,10 +69,10 @@ const techPillars = [
 ];
 
 const rdStats = [
-  { value: "300+", label: "授权专利", sub: "核心技术积累" },
+  { value: "130+", label: "芯片专利", sub: "含发明专利20余项" },
   { value: "22%", label: "研发投入占比", sub: "持续高强度投入" },
-  { value: "150+", label: "研发工程师", sub: "博士/硕士占比 > 70%" },
-  { value: "3", label: "研发中心", sub: "深圳 · 上海 · 北京" },
+  { value: "30+", label: "研发工程师", sub: "博士硕士为骨干" },
+  { value: "1", label: "研发中心", sub: "深圳总部" },
 ];
 
 const roadmap = [
@@ -117,20 +117,8 @@ const roadmap = [
 const centers = [
   {
     city: "深圳",
-    role: "总部 & 主研发中心",
-    focus: "PMIC / DC-DC / LDO 核心研发，工艺平台研究",
-    employees: "80+",
-  },
-  {
-    city: "上海",
-    role: "电机驱动 & 汽车电子中心",
-    focus: "车规 BMS、电机驱动、功能安全认证",
-    employees: "40+",
-  },
-  {
-    city: "北京",
-    role: "算法 & AI 设计中心",
-    focus: "AI 辅助设计、充电算法、系统级仿真",
+    role: "总部 & 研发中心",
+    focus: "PMIC / DC-DC / LDO 核心研发，芯片设计与系统研发",
     employees: "30+",
   },
 ];
@@ -317,11 +305,11 @@ export function RnD() {
             <div className="text-xs tracking-widest uppercase text-cyan-500 font-semibold mb-3">
               GLOBAL R&D CENTERS
             </div>
-            <h2 className="text-4xl font-black mb-3 text-slate-900">三大研发中心</h2>
-            <p className="text-slate-500">深圳 · 上海 · 北京，聚焦不同技术方向</p>
+            <h2 className="text-4xl font-black mb-3 text-slate-900">研发中心</h2>
+            <p className="text-slate-500">深圳总部，聚焦芯片设计与系统研发</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             {centers.map((center, i) => (
               <motion.div
                 key={i}
@@ -360,7 +348,7 @@ export function RnD() {
                 INTELLECTUAL PROPERTY
               </div>
               <h2 className="text-4xl font-black mb-6 text-slate-900">
-                300+ 核心专利
+                130+ 芯片专利
                 <br />
                 构建技术壁垒
               </h2>
@@ -370,7 +358,7 @@ export function RnD() {
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { value: "300+", label: "授权专利总数" },
+                  { value: "130+", label: "芯片专利总数" },
                   { value: "85%", label: "发明专利占比" },
                   { value: "20+", label: "PCT 国际专利" },
                   { value: "50+", label: "年新增专利量" },

@@ -3,12 +3,12 @@ import { Target, Lightbulb, Award, Users, Globe, Zap, ArrowRight } from "lucide-
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const timeline = [
-  { year: "2015", event: "质能达微电子在深圳南山科技园成立，专注模拟与混合信号芯片研发" },
+  { year: "2015", event: "质能达微电子在深圳成立，专注模拟与混合信号芯片研发" },
   { year: "2017", event: "推出首款 QED-LDO 系列产品，进入消费电子市场，获天使轮融资" },
   { year: "2019", event: "DC-DC 转换器系列量产，完成 A 轮融资，研发团队扩张至 30 人" },
   { year: "2021", event: "PMIC 旗舰产品进入头部手机品牌供应链，营收突破 1 亿元" },
-  { year: "2022", event: "完成 B 轮融资，开始布局车规级产品线，上海研发中心成立" },
-  { year: "2023", event: "车规 BMS 通过 AEC-Q100 认证，获评国家高新技术企业，北京中心建立" },
+  { year: "2022", event: "完成 B 轮融资，开始布局车规级产品线" },
+  { year: "2023", event: "车规 BMS 通过 AEC-Q100 认证，获评国家高新技术企业" },
   { year: "2024", event: "完成 B+ 轮战略融资，估值突破 100 亿元，启动科创板上市筹备" },
   { year: "2026", event: "正式启动 IPO 进程，迈向资本市场新征程" },
 ];
@@ -72,12 +72,14 @@ const leadership = [
 ];
 
 const honors = [
-  { title: "国家高新技术企业", org: "科学技术部", year: "2023" },
-  { title: "国家专精特新「小巨人」", org: "工业和信息化部", year: "2024" },
-  { title: "广东省科技进步奖", org: "广东省人民政府", year: "2023" },
-  { title: "深圳市「高精尖」技术企业", org: "深圳市科学技术局", year: "2022" },
-  { title: "ISO 9001:2015 质量管理认证", org: "SGS", year: "2021" },
-  { title: "AEC-Q100 Grade 0 车规认证", org: "JEDEC", year: "2023" },
+  { title: "国家高新技术企业", org: "科学技术部", year: "2020" },
+  { title: "国家级专精特新", org: "工业和信息化部", year: "2023" },
+  { title: "深圳市高新技术企业", org: "深圳市科技创新委员会", year: "2019" },
+  { title: "中国创新创业大奖赛深圳总决赛亚军", org: "深圳市人民政府", year: "2018" },
+  { title: "龙华区中小微企业100强", org: "龙华区政府", year: "2021" },
+  { title: "2020年中国国家专利发明奖", org: "国家知识产权局", year: "2020" },
+  { title: "知识产权贯标证书", org: "国家知识产权局", year: "2021" },
+  { title: "集成电路布图专利4项", org: "国家知识产权局", year: "2022" },
 ];
 
 export function About() {
@@ -175,20 +177,19 @@ export function About() {
                 <br />
                 模拟芯片领导者              </h2>
               <p className="text-slate-500 leading-relaxed mb-5">
-                质能达成立于 2015 年，总部位于深圳南山科技园，
-                在上海、北京设有专业研发中心。公司专注于模拟与混合信号集成电路的研发、设计与销售，
+                质能达成立于 2015 年，总部位于深圳龙华区。公司专注于模拟与混合信号集成电路的研发、设计与销售，
                 产品涵盖 PMIC、DC-DC 转换器、LDO、电池管理及电机驱动等六大系列。              </p>
               <p className="text-slate-500 leading-relaxed mb-8">
-                凭借 150+ 名高素质研发工程师（博士/硕士占比超 70%）、300+ 项核心专利、
-                1000+ 款产品型号及 500+ 全球客户，质能达已跻身中国模拟芯片设计领域领先梯队，
+                凭借拥有博士、多位硕士为骨干的研发团队、130 多项芯片专利、
+                50+ 款产品型号及 100+ 合作客户，质能达已跻身中国模拟芯片设计领域领先梯队，
                 并积极推进科创板上市进程，致力于进一步扩大规模、提升全球竞争力。              </p>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { value: "2015", label: "成立年份" },
-                  { value: "150+", label: "研发工程师" },
-                  { value: "1000+", label: "产品型号" },
-                  { value: "500+", label: "全球客户" },
+                  { value: "30+", label: "研发工程师" },
+                  { value: "50+", label: "产品型号" },
+                  { value: "100+", label: "合作客户" },
                 ].map((s, i) => (
                   <div key={i} className="p-4 bg-white shadow-sm rounded-xl border border-slate-200">
                     <div className="text-2xl font-black text-cyan-600 mb-1">{s.value}</div>

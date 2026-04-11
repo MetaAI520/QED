@@ -5,8 +5,8 @@ import {
   Zap,
   Cpu,
   Battery,
-  PlugZap,
-  Gauge,
+  Lightbulb,
+  Monitor,
   Radio,
   Shield,
   TrendingUp,
@@ -20,82 +20,82 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 const stats = [
   { value: "10+", label: "年专注模拟芯片" },
-  { value: "300+", label: "核心专利" },
-  { value: "1000+", label: "产品型号" },
-  { value: "500+", label: "全球客户" },
+  { value: "130+", label: "芯片专利" },
+  { value: "50+", label: "产品型号" },
+  { value: "100+", label: "合作客户" },
 ];
 
 const products = [
   {
-    icon: Zap,
-    name: "电源管理芯片",
-    nameEn: "PMIC",
-    desc: "多路电压轨高度集成，适用于智能终端全场景",
+    icon: Lightbulb,
+    name: "LED芯片",
+    nameEn: "LED Chip IC",
+    desc: "电源线载波LED景观照明芯片，支持点控全彩RGB，广泛应用于景观照明、透明屏等",
     color: "from-cyan-500 to-blue-600",
   },
   {
-    icon: Cpu,
-    name: "DC-DC 转换器",
-    nameEn: "DC-DC Converter",
-    desc: "高效率 Buck/Boost/Buck-Boost，宽输入电压范围",
-    color: "from-blue-500 to-indigo-600",
-  },
-  {
-    icon: Gauge,
-    name: "LDO 线性稳压器",
-    nameEn: "LDO Regulator",
-    desc: "超低噪声、高 PSRR，为精密模拟电路保驾护航",
-    color: "from-violet-500 to-purple-600",
-  },
-  {
     icon: Battery,
-    name: "电池管理芯片",
-    nameEn: "Battery Management",
-    desc: "精准电量计量、多重保护，延长电池使用寿命",
+    name: "BMS芯片",
+    nameEn: "BMS Chip",
+    desc: "新能源锂电池管理芯片，独创单颗高集成度BMS，支持2-20节电池级联管理",
     color: "from-emerald-500 to-teal-600",
   },
   {
-    icon: PlugZap,
-    name: "充电管理芯片",
-    nameEn: "Charger IC",
-    desc: "支持 USB-C PD 及无线充电，高效快充方案",
+    icon: Monitor,
+    name: "LCD芯片",
+    nameEn: "LCD Driver IC",
+    desc: "LCD显示驱动芯片，适用于各类液晶显示面板驱动与控制应用",
+    color: "from-violet-500 to-purple-600",
+  },
+  {
+    icon: Zap,
+    name: "Power芯片",
+    nameEn: "Power IC",
+    desc: "电源管理与控制系列芯片，覆盖稳压、转换、保护等电源管理全链路",
     color: "from-orange-500 to-amber-600",
   },
   {
+    icon: Cpu,
+    name: "传感器芯片",
+    nameEn: "Sensor IC",
+    desc: "高精度传感器芯片，对标德州仪器、英飞凌等国际品牌，实现国产替代",
+    color: "from-blue-500 to-indigo-600",
+  },
+  {
     icon: Radio,
-    name: "电机驱动芯片",
-    nameEn: "Motor Driver",
-    desc: "BLDC/步进电机全驱动方案，低 EMI 高精度控制",
+    name: "超声波MEMS+CMOS",
+    nameEn: "Ultrasonic MEMS+CMOS",
+    desc: "超声波MEMS+CMOS芯片AI一体化方案，传感器芯片及AI算法国内首创",
     color: "from-pink-500 to-rose-600",
   },
 ];
 
 const solutions = [
   {
-    name: "消费电子",
-    nameEn: "Consumer Electronics",
-    desc: "智能手机、平板、可穿戴设备全系列电源解决方案",
+    name: "LED景观照明",
+    nameEn: "LED Landscape Lighting",
+    desc: "电源线载波LED景观照明芯片，智能点控全彩RGB方案",
     image:
       "https://images.unsplash.com/photo-1704026437278-77f1db74859c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb2NoaXAlMjBjaXJjdWl0JTIwYm9hcmQlMjBjbG9zZSUyMHVwfGVufDF8fHx8MTc3NTY1MTgzMHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    name: "工业物联网",
-    nameEn: "Industrial IoT",
-    desc: "低功耗、宽温域，满足严苛工业级应用需求",
-    image:
-      "https://images.unsplash.com/photo-1674269161229-165040284030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGNpdHklMjBJb1QlMjBjb25uZWN0ZWQlMjBkZXZpY2VzJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzU2NTE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-  {
-    name: "新能源汽车",
-    nameEn: "New Energy Vehicle",
-    desc: "车规级 BMS 与充电管理，赋能 EV 安全高效",
+    name: "新能源BMS管理",
+    nameEn: "Battery Management",
+    desc: "锂电池管理芯片方案，支持2-20节电池级联管理",
     image:
       "https://images.unsplash.com/photo-1763543007050-4dac73ffc67f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMHZlaGljbGUlMjBFViUyMGJhdHRlcnklMjBjaGFyZ2luZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc1NjUxODM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
-    name: "5G 通信基站",
-    nameEn: "5G Infrastructure",
-    desc: "高功率密度电源方案，支撑 5G 网络基础设施建设",
+    name: "超声波MEMS+AI",
+    nameEn: "Ultrasonic MEMS+AI",
+    desc: "MEMS+CMOS芯片AI一体化方案，国内首创自主知识产权",
+    image:
+      "https://images.unsplash.com/photo-1674269161229-165040284030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGNpdHklMjBJb1QlMjBjb25uZWN0ZWQlMjBkZXZpY2VzJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzU2NTE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  },
+  {
+    name: "医疗电子",
+    nameEn: "Medical Electronics",
+    desc: "传感器与MEMS芯片赋能便携式医疗设备与超声诊断",
     image:
       "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwZGF0YSUyMGNlbnRlciUyMHNlcnZlcnN8ZW58MXx8fHwxNzc1NjUxODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
@@ -105,7 +105,7 @@ const advantages = [
   {
     icon: FlaskConical,
     title: "自主 IP 核心",
-    desc: "300+ 核心专利构成技术护城河，持续积累差异化竞争壁垒",
+    desc: "130+ 芯片专利构成技术护城河，持续积累差异化竞争壁垒",
   },
   {
     icon: Shield,
@@ -120,7 +120,7 @@ const advantages = [
   {
     icon: Globe,
     title: "全球化服务",
-    desc: "设立深圳、上海、北京三大研发中心，服务 500+ 全球客户",
+    desc: "深圳总部研发中心，服务 100+ 合作客户",
   },
 ];
 
@@ -147,11 +147,12 @@ const news = [
 
 const certifications = [
   "国家高新技术企业",
-  "专精特新「小巨人」",
-  "ISO 9001:2015",
-  "AEC-Q100 车规认证",
-  "IATF 16949",
-  "ISO 14001",
+  "国家级专精特新",
+  "深圳市高新技术企业",
+  "中国创新创业大奖赛深圳总决赛亚军",
+  "龙华区中小微企业100强",
+  "2020年中国国家专利发明奖",
+  "知识产权贯标证书",
 ];
 
 export function Home() {
@@ -284,7 +285,7 @@ export function Home() {
             </div>
             <h2 className="text-4xl md:text-5xl font-black mb-4 text-slate-900">六大产品线</h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-              从 PMIC 到电机驱动，质能达提供覆盖全场景的模拟芯片解决方案
+              从 LED 到 MEMS，质能达提供覆盖多场景的自主芯片解决方案
             </p>
           </motion.div>
 
@@ -496,15 +497,15 @@ export function Home() {
                 产品广泛应用于消费电子、物联网、新能源汽车等多个高速增长市场。
               </p>
               <p className="text-slate-500 leading-relaxed mb-8">
-                凭借深厚的模拟设计功底与快速迭代能力，质能达已累计推出 1000+ 款产品，
-                服务全球 500+ 客户，并积极推进科创板上市进程，
+                凭借深厚的模拟设计功底与快速迭代能力，质能达已累计推出 50+ 款产品，
+                服务 100+ 合作客户，并积极推进科创板上市进程，
                 致力于成为全球领先的模拟芯片供应商。
               </p>
 
               <div className="space-y-3 mb-8">
                 {[
                   "模拟与混合信号芯片国家高新企业",
-                  "自主核心 IP，300+ 授权专利",
+                  "自主核心 IP，130+ 芯片专利",
                   "AEC-Q100 车规级产品认证",
                   "研发投入占营收比超 22%",
                 ].map((item, i) => (
@@ -622,10 +623,10 @@ export function Home() {
                 className="grid grid-cols-2 gap-4"
               >
                 {[
-                  { value: "+85%", label: "2025年营收增长", sub: "同比增长" },
-                  { value: "52%", label: "毛利率", sub: "行业领先水平" },
-                  { value: "18.5亿", label: "2025年营收", sub: "人民币元" },
-                  { value: "22%", label: "研发投入占比", sub: "持续技术领先" },
+                  { value: "1.3亿", label: "近三年销售业绩", sub: "持续增长" },
+                  { value: "130+", label: "芯片专利", sub: "含发明专利20余项" },
+                  { value: "50+", label: "产品型号", sub: "六大产品线" },
+                  { value: "100+", label: "合作客户", sub: "覆盖多个行业" },
                 ].map((item, i) => (
                   <div
                     key={i}

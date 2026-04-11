@@ -5,19 +5,19 @@ const highlights = [
   {
     icon: TrendingUp,
     title: "营收增长",
-    value: "+85%",
-    description: "2025年同比增长",
+    value: "1.3亿",
+    description: "近三年累计销售",
   },
   {
     icon: BarChart3,
-    title: "毛利率",
-    value: "52%",
-    description: "保持行业领先",
+    title: "芯片专利",
+    value: "130+",
+    description: "含发明专利20余项",
   },
   {
     icon: Users,
     title: "客户数量",
-    value: "1000+",
+    value: "100+",
     description: "全球合作伙伴",
   },
   {
@@ -29,24 +29,9 @@ const highlights = [
 ];
 
 const financialData = [
-  {
-    year: "2025",
-    revenue: "18.5亿元",
-    growth: "+85%",
-    profit: "4.2亿元",
-  },
-  {
-    year: "2024",
-    revenue: "10.0亿元",
-    growth: "+65%",
-    profit: "2.1亿元",
-  },
-  {
-    year: "2023",
-    revenue: "6.1亿元",
-    growth: "+45%",
-    profit: "1.0亿元",
-  },
+  { year: "2023-2025", revenue: "1.3亿元", growth: "持续增长", profit: "-" },
+  { year: "2022", revenue: "3500万元", growth: "+40%", profit: "-" },
+  { year: "2021", revenue: "2500万元", growth: "+35%", profit: "-" },
 ];
 
 const reports = [

@@ -250,7 +250,7 @@ export function News() {
               <div className="w-px h-8 bg-slate-200 hidden sm:block" />
               <div>
                 <div className="text-xs text-slate-400 mb-1">媒体热线</div>
-                <div className="text-cyan-600 font-semibold">+86 (0755) 8888 8899</div>
+                <div className="text-cyan-600 font-semibold">0755-2893-8531</div>
               </div>
             </div>
           </motion.div>

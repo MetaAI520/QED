@@ -5,23 +5,9 @@ import { Phone, Mail, MapPin, Clock, Send, ChevronDown, CheckCircle2 } from "luc
 const offices = [
   {
     city: "深圳总部",
-    address: "广东省深圳市南山区科技园南区科技二路 A 栋 18 层",
-    phone: "+86 (0755) 8888 8888",
+    address: "深圳龙华区观湖街道鹭湖社区观盛五路科姆龙C栋12层",
+    phone: "0755-2893-8531",
     email: "sz@qedmicro.com",
-    hours: "周一至周五 9:00 - 18:00",
-  },
-  {
-    city: "上海研发中心",
-    address: "上海市张江高科技园区碧波路 690 号张江集电港 3 号楼",
-    phone: "+86 (021) 6888 8888",
-    email: "sh@qedmicro.com",
-    hours: "周一至周五 9:00 - 18:00",
-  },
-  {
-    city: "北京 AI 设计中心",
-    address: "北京市海淀区中关村科学城中关村集成电路设计园",
-    phone: "+86 (010) 6888 8888",
-    email: "bj@qedmicro.com",
     hours: "周一至周五 9:00 - 18:00",
   },
 ];
@@ -230,7 +216,7 @@ export function Contact() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm text-slate-600">
                     <Phone size={16} className="text-slate-400 flex-shrink-0" />
-                    +86 400-888-8888（免费热线）
+                    0755-2893-8531
                   </div>
                   <div className="flex items-center gap-3 text-sm text-slate-600">
                     <Mail size={16} className="text-slate-400 flex-shrink-0" />
@@ -252,7 +238,7 @@ export function Contact() {
                   </div>
                   <div className="flex items-center gap-3 text-sm text-slate-600">
                     <Phone size={16} className="text-slate-400 flex-shrink-0" />
-                    +86 (0755) 8888 8899
+                    0755-2893-8531
                   </div>
                 </div>
               </div>
@@ -286,7 +272,7 @@ export function Contact() {
             <h2 className="text-3xl font-black text-slate-900">办公地点</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             {offices.map((office, i) => (
               <motion.div
                 key={i}
