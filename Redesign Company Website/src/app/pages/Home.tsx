@@ -181,7 +181,7 @@ const certifications = [
   "2020年中国国家专利发明奖",
   "知识产权贯标证书",
   "留学生创业补贴一等奖",
-  "集成电路布图专利4项",
+  "集成电路布图多项专利",
 ];
 
 export function Home() {
@@ -566,7 +566,7 @@ export function Home() {
                 {[
                   "模拟与混合信号芯片国家高新企业",
                   "自主核心 IP，130+ 芯片专利",
-                  "集成电路布图专利4项",
+                  "集成电路布图多项专利",
                   "对标德州仪器、英飞凌实现国产替代",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">

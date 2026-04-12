@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
 import {
@@ -125,6 +126,8 @@ const centers = [
 ];
 
 export function RnD() {
+  const [selectedCert, setSelectedCert] = useState<string | null>(null);
+
   return (
     <div>
       {/* Hero */}
@@ -504,7 +507,8 @@ export function RnD() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.03 }}
                 viewport={{ once: true }}
-                className="rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all bg-white"
+                className="rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all bg-white cursor-pointer"
+                onClick={() => setSelectedCert(url)}
               >
                 <ImageWithFallback
                   src={url}
@@ -540,6 +544,19 @@ export function RnD() {
           </motion.div>
         </div>
       </section>
+      {/* Lightbox Overlay */}
+      {selectedCert && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-pointer"
+          onClick={() => setSelectedCert(null)}
+        >
+          <img
+            src={selectedCert}
+            alt="荣誉证书大图"
+            className="max-w-full max-h-[90vh] object-contain rounded-xl shadow-2xl"
+          />
+        </div>
+      )}
     </div>
   );
 }
