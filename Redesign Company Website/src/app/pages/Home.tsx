@@ -107,7 +107,7 @@ const solutions = [
     nameEn: "Sensor Applications",
     desc: "高精度传感器芯片，对标TI/英飞凌，实现国产替代",
     image:
-      "https://images.unsplash.com/photo-1763543007050-4dac73ffc67f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMHZlaGljbGUlMjBFViUyMGJhdHRlcnklMjBjaGFyZ2luZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc1NjUxODM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8bWljcm9jaGlwJTIwY2lyY3VpdCUyMGJvYXJkJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3MTI5MzI4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     id: "medical",
@@ -412,7 +412,7 @@ export function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {solutions.map((sol, index) => (
               <Link key={index} to={`/solutions#${sol.id}`}>
                 <motion.div
@@ -420,7 +420,7 @@ export function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group relative rounded-2xl overflow-hidden cursor-pointer aspect-[4/3] md:aspect-video"
+                  className="group relative rounded-2xl overflow-hidden cursor-pointer aspect-[4/3]"
                 >
                   <ImageWithFallback
                     src={sol.image}

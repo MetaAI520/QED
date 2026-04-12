@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import { motion } from "motion/react";
 import { Phone, Mail, MapPin, Clock, Send, ChevronDown, CheckCircle2 } from "lucide-react";
 
@@ -334,6 +335,7 @@ export function Contact() {
                   )
                 )}
               </div>
+              <div className="flex flex-wrap gap-3">
               <a
                 href="mailto:hr@qedmicro.com"
                 className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl text-sm font-semibold text-white hover:opacity-90 transition-all"
@@ -341,6 +343,13 @@ export function Contact() {
                 发送简历至 hr@qedmicro.com
                 <Send size={16} />
               </a>
+              <Link
+                to="/careers"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-slate-100 border border-slate-300 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-200 transition-all"
+              >
+                查看在招岗位
+              </Link>
+              </div>
             </div>
           </motion.div>
         </div>
