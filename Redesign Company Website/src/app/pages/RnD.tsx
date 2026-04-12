@@ -465,33 +465,52 @@ export function RnD() {
             <h3 className="text-2xl font-bold text-slate-900 mb-2">荣誉证书</h3>
             <p className="text-slate-500 text-sm">部分荣誉证书展示</p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
             {[
-              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_2614.jpg", alt: "国家高新技术企业证书" },
-              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_8498.jpg", alt: "专精特新企业证书" },
-              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_3498.jpg", alt: "创新创业大赛获奖证书" },
-              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_5765.jpg", alt: "知识产权贯标证书" },
-              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_7765.jpg", alt: "龙华区100强证书" },
-              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_9765.jpg", alt: "专利发明奖证书" },
-              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_1765.jpg", alt: "留学生创业补贴证书" },
-              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164414_2614.jpg", alt: "集成电路布图专利证书" },
-            ].map((cert, i) => (
+              "http://cdn057.yun-img.com/static/upload/qedmicro/album/20180424112554_96912.jpg",
+              "http://cdn043.yun-img.com/static/upload/qedmicro/album/20180424120639_90668.jpg",
+              "http://cdn035.yun-img.com/static/upload/qedmicro/album/20180424120531_76459.jpg",
+              "http://cdn047.yun-img.com/static/upload/qedmicro/album/20180424120446_75959.jpg",
+              "http://cdn057.yun-img.com/static/upload/qedmicro/album/20180424120303_38743.jpg",
+              "http://cdn063.yun-img.com/static/upload/qedmicro/album/20180424120201_10528.jpg",
+              "http://cdn055.yun-img.com/static/upload/qedmicro/album/20180424120026_45495.jpg",
+              "http://cdn063.yun-img.com/static/upload/qedmicro/album/20180424115816_94225.jpg",
+              "http://cdn053.yun-img.com/static/upload/qedmicro/album/20180424114142_94905.jpg",
+              "http://cdn035.yun-img.com/static/upload/qedmicro/album/20180424113710_97783.jpg",
+              "http://cdn063.yun-img.com/static/upload/qedmicro/album/20180424113542_42592.jpg",
+              "http://cdn053.yun-img.com/static/upload/qedmicro/album/20180324153732_33850.jpg",
+              "http://cdn043.yun-img.com/static/upload/qedmicro/album/20180324153718_39363.jpg",
+              "http://cdn053.yun-img.com/static/upload/qedmicro/album/20180324153652_65735.jpg",
+              "http://cdn055.yun-img.com/static/upload/qedmicro/album/20180324153631_73728.jpg",
+              "http://cdn057.yun-img.com/static/upload/qedmicro/album/20180324153602_82644.jpg",
+              "http://cdn063.yun-img.com/static/upload/qedmicro/album/20180324153516_26355.jpg",
+              "http://cdn055.yun-img.com/static/upload/qedmicro/album/20180324153425_12937.jpg",
+              "http://cdn045.yun-img.com/static/upload/qedmicro/album/20180324153339_39612.jpg",
+              "http://cdn055.yun-img.com/static/upload/qedmicro/album/20180324153129_10557.jpg",
+              "http://cdn047.yun-img.com/static/upload/qedmicro/album/20180324153043_10103.jpg",
+              "http://cdn063.yun-img.com/static/upload/qedmicro/album/20180324153017_67444.jpg",
+              "http://cdn043.yun-img.com/static/upload/qedmicro/album/20180324152957_36882.jpg",
+              "http://cdn053.yun-img.com/static/upload/qedmicro/album/20180324151232_35298.jpg",
+              "http://cdn053.yun-img.com/static/upload/qedmicro/album/20180324151213_71872.jpg",
+              "http://cdn065.yun-img.com/static/upload/qedmicro/album/20180324151146_57139.jpg",
+              "http://cdn035.yun-img.com/static/upload/qedmicro/album/20180324151122_37987.jpg",
+              "http://cdn065.yun-img.com/static/upload/qedmicro/album/20180324151020_31715.jpg",
+              "http://cdn047.yun-img.com/static/upload/qedmicro/album/20180324151004_59686.jpg",
+              "http://cdn063.yun-img.com/static/upload/qedmicro/album/20180324150913_81909.jpg",
+            ].map((url, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: i * 0.05 }}
+                transition={{ delay: i * 0.03 }}
                 viewport={{ once: true }}
                 className="rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all bg-white"
               >
                 <ImageWithFallback
-                  src={cert.src}
-                  alt={cert.alt}
-                  className="w-full h-40 object-cover"
+                  src={url}
+                  alt={`荣誉证书 ${i + 1}`}
+                  className="w-full h-36 object-cover"
                 />
-                <div className="p-2 text-center">
-                  <span className="text-xs text-slate-500">{cert.alt}</span>
-                </div>
               </motion.div>
             ))}
           </div>

@@ -48,15 +48,15 @@ const leadership = [
     position: "Chairman",
     bio: "俄罗斯自然科学院外籍院士，国家特聘专家。清华大学毕业，美国加州大学电子工程与计算机系硕士、物理系博士。具有30年半导体芯片设计经验，拥有国内外130多项专利。",
     color: "from-cyan-500 to-blue-600",
-    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/img/20230113_164413_1001.jpg",
+    photo: "http://cdn053.yun-img.com/static/upload/qedmicro/visualtoolkit/20180420121317_79814.png",
   },
   {
     name: "常菲亚 博士",
     nameEn: "Dr. Chang Feiya",
     position: "董事总经理",
-    bio: "AI商业化专家，负责公司整体运营管理与战略规划。在人工智能与半导体行业拥有丰富的商业化经验，推动质能达产品市场化进程。",
+    bio: "人工智能商业化与全球化运营领域资深专家。拥有超过十一年顶尖科技企业实战经验，曾深度参与华为、腾讯等企业全球市场关键业务拓展，现于香港理工大学攻读商业人工智能博士学位。",
     color: "from-violet-500 to-purple-600",
-    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/img/20230113_164413_1002.jpg",
+    photo: "",
   },
   {
     name: "邓小群 女士",
@@ -64,7 +64,7 @@ const leadership = [
     position: "COO / 执行董事",
     bio: "深圳市国家领军高层次人才A类。中国人民大学EMBA研究生，澳大利亚阳光海岸大学硕士。具有近20年国内外电子产品销售经验。",
     color: "from-emerald-500 to-teal-600",
-    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/img/20230113_164413_1003.jpg",
+    photo: "http://cdn065.yun-img.com/static/upload/qedmicro/visualtoolkit/20180420140418_99727.png",
   },
   {
     name: "林浩 先生",
@@ -72,7 +72,7 @@ const leadership = [
     position: "研发副总经理",
     bio: "深圳市国家领军人才B类。西北工业大学电子信息工程系毕业，曾在华为中研硬件设计部从事芯片研发。拥有几十篇发明专利，参与了几十款芯片的研发及流片。",
     color: "from-orange-500 to-amber-600",
-    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/img/20230113_164413_1004.jpg",
+    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/visualtoolkit/20180420140756_64052.png",
   },
 ];
 
@@ -308,12 +308,16 @@ export function About() {
                 viewport={{ once: true }}
                 className="p-6 bg-white shadow-sm rounded-2xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all"
               >
-                <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 border border-slate-200">
-                  <ImageWithFallback
-                    src={leader.photo}
-                    alt={leader.name}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 border border-slate-200 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+                  {leader.photo ? (
+                    <ImageWithFallback
+                      src={leader.photo}
+                      alt={leader.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Users size={28} className="text-slate-400" />
+                  )}
                 </div>
                 <h3 className="text-lg font-bold mb-0.5 text-slate-900">{leader.name}</h3>
                 <div className="text-xs text-slate-400 font-mono mb-2">{leader.nameEn}</div>
@@ -341,37 +345,42 @@ export function About() {
             <p className="text-slate-500">汇聚国内外顶尖学者与行业专家，为质能达提供战略指导</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {[
               {
                 name: "高秉强 博士",
                 nameEn: "Dr. Philip Ko",
                 title: "首席科学顾问",
-                bio: "美国柏克莱加州大学硕士和博士学位。曾任香港科技大学工学院院长。IEEE固体电路大奖获得者，拥有六项专利，200篇研究著作。",
+                bio: "美国柏克莱加州大学硕士和博士。曾任香港科技大学工学院院长。IEEE固体电路大奖获得者。",
+                photo: "http://cdn063.yun-img.com/static/upload/qedmicro/visualtoolkit/20180420142530_25057.png",
               },
               {
                 name: "陈春章 博士",
                 nameEn: "Dr. Chen Chunzhang",
                 title: "技术顾问",
-                bio: "半导体行业资深专家，在集成电路设计与制造领域拥有数十年经验，为质能达提供工艺与设计方向指导。",
+                bio: "半导体行业资深专家，在集成电路设计与制造领域拥有数十年经验。",
+                photo: "http://cdn047.yun-img.com/static/upload/qedmicro/visualtoolkit/20180420141458_18315.png",
               },
               {
                 name: "苏哲峰 先生",
                 nameEn: "Su Zhefeng",
                 title: "产业顾问",
-                bio: "深耕半导体产业多年，在芯片市场策略、供应链管理等方面拥有丰富经验，助力质能达市场拓展。",
+                bio: "深耕半导体产业多年，在芯片市场策略、供应链管理等方面拥有丰富经验。",
+                photo: "http://cdn053.yun-img.com/static/upload/qedmicro/visualtoolkit/20180420141243_92647.png",
               },
               {
                 name: "TIMOTHY LEE",
                 nameEn: "Timothy Lee",
                 title: "国际顾问",
-                bio: "具有丰富的国际半导体行业经验，为质能达的全球化战略与国际市场拓展提供专业建议。",
+                bio: "具有丰富的国际半导体行业经验，为质能达全球化战略提供专业建议。",
+                photo: "http://cdn055.yun-img.com/static/upload/qedmicro/visualtoolkit/20180704164011_86139.png",
               },
               {
                 name: "金鹏 博士",
                 nameEn: "Dr. Jin Peng",
                 title: "技术顾问",
-                bio: "在模拟与混合信号芯片设计领域拥有深厚学术背景与产业经验，为质能达核心技术研发提供指导。",
+                bio: "在模拟与混合信号芯片设计领域拥有深厚学术背景与产业经验。",
+                photo: "https://cdn063.yun-img.com/static/upload/qedmicro/visualtoolkit/20250716124438_25466.jpg",
               },
             ].map((advisor, index) => (
               <motion.div
@@ -380,14 +389,21 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-white shadow-sm rounded-2xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all"
+                className="p-5 bg-white shadow-sm rounded-2xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all text-center"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
-                  <Users size={24} />
+                <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 mx-auto border border-slate-200 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
+                  {advisor.photo ? (
+                    <ImageWithFallback
+                      src={advisor.photo}
+                      alt={advisor.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Users size={24} className="text-slate-400" />
+                  )}
                 </div>
-                <h3 className="text-lg font-bold mb-0.5 text-slate-900">{advisor.name}</h3>
-                <div className="text-xs text-slate-400 font-mono mb-2">{advisor.nameEn}</div>
-                <p className="text-cyan-600 text-sm font-semibold mb-3">{advisor.title}</p>
+                <h3 className="text-sm font-bold mb-0.5 text-slate-900">{advisor.name}</h3>
+                <p className="text-cyan-600 text-xs font-semibold mb-2">{advisor.title}</p>
                 <p className="text-slate-500 text-xs leading-relaxed">{advisor.bio}</p>
               </motion.div>
             ))}
@@ -417,6 +433,12 @@ export function About() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:opacity-90 transition-all"
               >
                 联系我们 <ArrowRight size={18} />
+              </Link>
+              <Link
+                to="/careers"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl font-semibold text-white hover:opacity-90 transition-all"
+              >
+                加入质能达 <ArrowRight size={18} />
               </Link>
               <Link
                 to="/investors"

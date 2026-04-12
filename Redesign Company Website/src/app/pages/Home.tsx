@@ -176,9 +176,12 @@ const certifications = [
   "国家级专精特新",
   "深圳市高新技术企业",
   "中国创新创业大赛优秀企业",
+  "中国创新创业大奖赛深圳总决赛亚军",
   "龙华区中小微企业100强",
   "2020年中国国家专利发明奖",
   "知识产权贯标证书",
+  "留学生创业补贴一等奖",
+  "集成电路布图专利4项",
 ];
 
 export function Home() {
@@ -302,7 +305,7 @@ export function Home() {
               transition={{ duration: 1, delay: 0.5 }}
               className="hidden lg:flex items-center justify-center relative"
             >
-              <div className="relative w-full max-w-lg">
+              <div className="relative w-full max-w-xl">
                 {/* Glow ring */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-full blur-3xl" />
                 <ImageWithFallback
