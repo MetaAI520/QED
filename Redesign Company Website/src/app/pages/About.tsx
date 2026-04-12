@@ -110,6 +110,9 @@ const leadership = [
 ];
 
 export function About() {
+  const [hoveredLeaderRow, setHoveredLeaderRow] = useState<number | null>(null);
+  const [hoveredAdvisorRow, setHoveredAdvisorRow] = useState<number | null>(null);
+
   return (
     <div>
       {/* Hero Section */}
@@ -320,14 +323,19 @@ export function About() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {leadership.map((leader, index) => (
+            {leadership.map((leader, index) => {
+              const row = Math.floor(index / 4);
+              const isRowExpanded = hoveredLeaderRow === row;
+              return (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group p-6 bg-white shadow-sm rounded-2xl border border-slate-200 hover:border-cyan-500 hover:shadow-md transition-all text-center"
+                className={`p-6 bg-white shadow-sm rounded-2xl border transition-all text-center ${isRowExpanded ? "border-cyan-500 shadow-md" : "border-slate-200 hover:border-cyan-500 hover:shadow-md"}`}
+                onMouseEnter={() => setHoveredLeaderRow(row)}
+                onMouseLeave={() => setHoveredLeaderRow(null)}
               >
                 <div className="w-24 h-24 rounded-2xl overflow-hidden mb-4 mx-auto border border-slate-200 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                   {leader.photo ? (
@@ -344,14 +352,15 @@ export function About() {
                 <p className="text-cyan-600 text-sm font-semibold mb-3">{leader.position}</p>
                 <p className="text-slate-500 text-xs leading-relaxed">{leader.bio}</p>
                 {leader.fullBio && (
-                  <div className="max-h-0 group-hover:max-h-40 overflow-hidden transition-all duration-500 ease-in-out">
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isRowExpanded ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}>
                     <div className="pt-3 mt-3 border-t border-slate-100">
                       <p className="text-slate-400 text-xs leading-relaxed">{leader.fullBio}</p>
                     </div>
                   </div>
                 )}
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -416,14 +425,19 @@ export function About() {
                 fullBio: "在模拟与混合信号芯片设计领域拥有深厚学术背景与产业经验，为质能达核心技术研发提供指导。",
                 photo: "https://cdn063.yun-img.com/static/upload/qedmicro/visualtoolkit/20250716124438_25466.jpg",
               },
-            ].map((advisor, index) => (
+            ].map((advisor, index) => {
+              const row = Math.floor(index / 6);
+              const isRowExpanded = hoveredAdvisorRow === row;
+              return (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group p-5 bg-white shadow-sm rounded-2xl border border-slate-200 hover:border-cyan-500 hover:shadow-md transition-all text-center"
+                className={`p-5 bg-white shadow-sm rounded-2xl border transition-all text-center ${isRowExpanded ? "border-cyan-500 shadow-md" : "border-slate-200 hover:border-cyan-500 hover:shadow-md"}`}
+                onMouseEnter={() => setHoveredAdvisorRow(row)}
+                onMouseLeave={() => setHoveredAdvisorRow(null)}
               >
                 <div className="w-24 h-24 rounded-2xl overflow-hidden mb-4 mx-auto border border-slate-200 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                   {advisor.photo ? (
@@ -440,14 +454,15 @@ export function About() {
                 <p className="text-cyan-600 text-xs font-semibold mb-2">{advisor.title}</p>
                 <p className="text-slate-500 text-xs leading-relaxed">{advisor.bio}</p>
                 {advisor.fullBio && (
-                  <div className="max-h-0 group-hover:max-h-40 overflow-hidden transition-all duration-500 ease-in-out">
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isRowExpanded ? "max-h-48 opacity-100" : "max-h-0 opacity-0"}`}>
                     <div className="pt-3 mt-3 border-t border-slate-100">
                       <p className="text-slate-400 text-xs leading-relaxed">{advisor.fullBio}</p>
                     </div>
                   </div>
                 )}
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
