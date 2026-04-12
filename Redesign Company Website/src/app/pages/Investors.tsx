@@ -57,24 +57,24 @@ const reports = [
 
 const announcements = [
   {
-    date: "2026-04-05",
-    title: "关于完成新一轮战略融资的公告",
+    date: "2025-09-02",
+    title: "关于林丰成院士团队获得宜兴国际精英创新创业大赛冠军的公告",
     category: "重大事项",
   },
   {
-    date: "2026-03-28",
-    title: "关于新产品通过车规级认证的公告",
-    category: "业务进展",
+    date: "2025-06-15",
+    title: "关于启动A+轮融资的公告",
+    category: "融资进展",
   },
   {
-    date: "2026-03-15",
-    title: "关于与国际科研机构合作的公告",
+    date: "2024-12-20",
+    title: "关于完成A轮融资的公告",
+    category: "重大事项",
+  },
+  {
+    date: "2024-05-09",
+    title: "关于与嘉兴大学推动产学研合作的公告",
     category: "战略合作",
-  },
-  {
-    date: "2026-02-20",
-    title: "关于董事会成员变更的公告",
-    category: "公司治理",
   },
 ];
 
@@ -94,26 +94,10 @@ const governance = [
 ];
 
 const milestones = [
-  {
-    date: "2026年4月",
-    event: "完成上市辅导备案",
-    status: "已完成",
-  },
-  {
-    date: "2026年6月",
-    event: "提交IPO申请材料",
-    status: "进行中",
-  },
-  {
-    date: "2026年Q3",
-    event: "接受监管机构审核",
-    status: "待进行",
-  },
-  {
-    date: "2026年Q4",
-    event: "正式挂牌上市",
-    status: "待进行",
-  },
+  { date: "2024年", event: "完成A轮融资", status: "已完成" },
+  { date: "2025年", event: "启动A+轮融资", status: "进行中" },
+  { date: "2026年", event: "完成A+轮融资，加速产品市场化", status: "待进行" },
+  { date: "2027年", event: "推进B轮融资，扩大市场规模", status: "待进行" },
 ];
 
 export function Investors() {
@@ -233,7 +217,7 @@ export function Investors() {
         </div>
       </section>
 
-      {/* IPO Progress */}
+      {/* Financing Progress */}
       <section className="py-14 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -242,8 +226,8 @@ export function Investors() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">上市进程</h2>
-            <p className="text-slate-500 text-lg">积极推进IPO工作</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">融资进程</h2>
+            <p className="text-slate-500 text-lg">积极推进A+轮融资</p>
           </motion.div>
 
           <div className="max-w-3xl mx-auto">
@@ -421,7 +405,7 @@ export function Investors() {
               投资者联系方式
             </h2>
             <p className="text-slate-600 text-lg mb-8">
-              如有投资相关问题，欢迎随时与我们的投资者关系团队联系。            </p>
+              如有投资相关问题或A+轮融资合作意向，欢迎随时与我们的投资者关系团队联系。            </p>
             <div className="space-y-4 text-lg">
               <p>
                 <span className="text-slate-500">电话：</span>

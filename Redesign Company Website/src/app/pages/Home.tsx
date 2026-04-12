@@ -27,6 +27,7 @@ const stats = [
 
 const products = [
   {
+    id: "led",
     icon: Lightbulb,
     name: "LED芯片",
     nameEn: "LED Chip IC",
@@ -34,6 +35,7 @@ const products = [
     color: "from-cyan-500 to-blue-600",
   },
   {
+    id: "bms",
     icon: Battery,
     name: "BMS芯片",
     nameEn: "BMS Chip",
@@ -41,6 +43,7 @@ const products = [
     color: "from-emerald-500 to-teal-600",
   },
   {
+    id: "lcd",
     icon: Monitor,
     name: "LCD芯片",
     nameEn: "LCD Driver IC",
@@ -48,6 +51,7 @@ const products = [
     color: "from-violet-500 to-purple-600",
   },
   {
+    id: "power",
     icon: Zap,
     name: "Power芯片",
     nameEn: "Power IC",
@@ -55,6 +59,7 @@ const products = [
     color: "from-orange-500 to-amber-600",
   },
   {
+    id: "sensor",
     icon: Cpu,
     name: "传感器芯片",
     nameEn: "Sensor IC",
@@ -62,6 +67,7 @@ const products = [
     color: "from-blue-500 to-indigo-600",
   },
   {
+    id: "mems",
     icon: Radio,
     name: "超声波MEMS+CMOS",
     nameEn: "Ultrasonic MEMS+CMOS",
@@ -72,6 +78,7 @@ const products = [
 
 const solutions = [
   {
+    id: "led-landscape",
     name: "LED景观照明",
     nameEn: "LED Landscape Lighting",
     desc: "电源线载波LED景观照明芯片，智能点控全彩RGB方案",
@@ -79,6 +86,7 @@ const solutions = [
       "https://images.unsplash.com/photo-1704026437278-77f1db74859c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb2NoaXAlMjBjaXJjdWl0JTIwYm9hcmQlMjBjbG9zZSUyMHVwfGVufDF8fHx8MTc3NTY1MTgzMHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
+    id: "bms",
     name: "新能源BMS管理",
     nameEn: "Battery Management",
     desc: "锂电池管理芯片方案，支持2-20节电池级联管理",
@@ -86,6 +94,7 @@ const solutions = [
       "https://images.unsplash.com/photo-1763543007050-4dac73ffc67f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMHZlaGljbGUlMjBFViUyMGJhdHRlcnklMjBjaGFyZ2luZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc1NjUxODM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
+    id: "mems-ai",
     name: "超声波MEMS+AI",
     nameEn: "Ultrasonic MEMS+AI",
     desc: "MEMS+CMOS芯片AI一体化方案，国内首创自主知识产权",
@@ -93,6 +102,7 @@ const solutions = [
       "https://images.unsplash.com/photo-1674269161229-165040284030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGNpdHklMjBJb1QlMjBjb25uZWN0ZWQlMjBkZXZpY2VzJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzU2NTE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
+    id: "medical",
     name: "医疗电子",
     nameEn: "Medical Electronics",
     desc: "传感器与MEMS芯片赋能便携式医疗设备与超声诊断",
@@ -126,21 +136,21 @@ const advantages = [
 
 const news = [
   {
-    date: "2026-04-05",
+    date: "2025-09-02",
     category: "公司动态",
-    title: "质能达完成 B+ 轮战略融资，估值突破百亿，加速科创板 IPO 进程",
-    tag: "重大事项",
+    title: "祝贺林丰成院士团队获得宜兴国际精英创新创业大赛冠军",
+    tag: "重大喜讯",
   },
   {
-    date: "2026-03-20",
-    category: "产品发布",
-    title: "质能达发布 QED-PMU9000 系列多路电源管理芯片，单芯片集成 12 路电压轨",
-    tag: "新品发布",
+    date: "2023-01-13",
+    category: "公司动态",
+    title: "质能达BMS产品获得2022年第十四届中国深圳创新创业大赛优秀奖",
+    tag: "荣誉资质",
   },
   {
-    date: "2026-03-08",
-    category: "荣誉认证",
-    title: "质能达荣获国家级专精特新「小巨人」企业认定，彰显核心竞争实力",
+    date: "2023-01-13",
+    category: "公司动态",
+    title: "质能达公司获得2022年中国创新创业大赛优秀企业",
     tag: "荣誉资质",
   },
 ];
@@ -149,7 +159,7 @@ const certifications = [
   "国家高新技术企业",
   "国家级专精特新",
   "深圳市高新技术企业",
-  "中国创新创业大奖赛深圳总决赛亚军",
+  "中国创新创业大赛优秀企业",
   "龙华区中小微企业100强",
   "2020年中国国家专利发明奖",
   "知识产权贯标证书",
@@ -188,7 +198,8 @@ export function Home() {
         />
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-4">
-          <div className="max-w-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -196,7 +207,7 @@ export function Home() {
               className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-cyan-500/10 rounded-full border border-cyan-500/20"
             >
               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse" />
-              <span className="text-cyan-400 text-sm">高性能电源管理芯片领军企业 · 科创板上市筹备中</span>
+              <span className="text-cyan-400 text-sm">高性能电源管理芯片领军企业 · A+轮融资进行中</span>
             </motion.div>
 
             <motion.h1
@@ -267,6 +278,34 @@ export function Home() {
               ))}
             </motion.div>
           </div>
+
+            {/* Right: Chip Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="hidden lg:flex items-center justify-center relative"
+            >
+              <div className="relative w-full max-w-md">
+                {/* Glow ring */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-full blur-3xl" />
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8M3x8bWljcm9jaGlwJTIwY2lyY3VpdCUyMGJvYXJkJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3MTI5MzI4MDB8MA&ixlib=rb-4.1.0&q=80&w=800"
+                  alt="半导体芯片"
+                  className="relative w-full rounded-3xl shadow-2xl shadow-cyan-500/10 border border-white/10"
+                />
+                {/* Floating badge */}
+                <div className="absolute -bottom-4 -left-4 px-4 py-2 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 text-white text-xs">
+                  <div className="font-bold text-cyan-400">130+ 芯片专利</div>
+                  <div className="text-gray-400">自主核心 IP</div>
+                </div>
+                <div className="absolute -top-4 -right-4 px-4 py-2 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 text-white text-xs">
+                  <div className="font-bold text-cyan-400">6 大产品线</div>
+                  <div className="text-gray-400">全场景覆盖</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
 
       </section>
@@ -291,33 +330,34 @@ export function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
-                className="group relative p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 cursor-pointer overflow-hidden"
-              >
-                {/* Hover glow */}
-                <div
-                  className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${product.color} blur-3xl`}
-                  style={{ opacity: 0 }}
-                />
-                <div className="absolute -bottom-8 -right-8 w-32 h-32 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full bg-gradient-to-br from-white to-transparent" />
-
-                <div
-                  className={`relative w-12 h-12 bg-gradient-to-br ${product.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
+              <Link key={index} to={`/products#${product.id}`}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.08 }}
+                  viewport={{ once: true }}
+                  className="group relative p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-300 transition-all duration-300 cursor-pointer overflow-hidden"
                 >
-                  <product.icon size={24} className="text-white" />
-                </div>
-                <div className="text-xs text-slate-400 mb-1 font-mono">{product.nameEn}</div>
-                <h3 className="text-xl font-bold mb-3 text-slate-900">{product.name}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{product.desc}</p>
-                <div className="mt-5 flex items-center gap-1 text-cyan-600 text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                  了解详情 <ArrowRight size={14} />
-                </div>
-              </motion.div>
+                  {/* Hover glow */}
+                  <div
+                    className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${product.color} blur-3xl`}
+                    style={{ opacity: 0 }}
+                  />
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full bg-gradient-to-br from-white to-transparent" />
+
+                  <div
+                    className={`relative w-12 h-12 bg-gradient-to-br ${product.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <product.icon size={24} className="text-white" />
+                  </div>
+                  <div className="text-xs text-slate-400 mb-1 font-mono">{product.nameEn}</div>
+                  <h3 className="text-xl font-bold mb-3 text-slate-900">{product.name}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{product.desc}</p>
+                  <div className="mt-5 flex items-center gap-1 text-cyan-600 text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                    了解详情 <ArrowRight size={14} />
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
 
@@ -358,33 +398,34 @@ export function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {solutions.map((sol, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.96 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative rounded-2xl overflow-hidden cursor-pointer aspect-[4/3] md:aspect-video"
-              >
-                <ImageWithFallback
-                  src={sol.image}
-                  alt={sol.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/40 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Link key={index} to={`/solutions#${sol.id}`}>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative rounded-2xl overflow-hidden cursor-pointer aspect-[4/3] md:aspect-video"
+                >
+                  <ImageWithFallback
+                    src={sol.image}
+                    alt={sol.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="text-xs text-cyan-400 font-mono mb-1">{sol.nameEn}</div>
-                  <h3 className="text-2xl font-bold mb-2 text-white">{sol.name}</h3>
-                  <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {sol.desc}
-                  </p>
-                  <div className="mt-3 flex items-center gap-1 text-cyan-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                    了解解决方案 <ArrowRight size={14} />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <div className="text-xs text-cyan-400 font-mono mb-1">{sol.nameEn}</div>
+                    <h3 className="text-2xl font-bold mb-2 text-white">{sol.name}</h3>
+                    <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {sol.desc}
+                    </p>
+                    <div className="mt-3 flex items-center gap-1 text-cyan-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                      了解解决方案 <ArrowRight size={14} />
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
 
@@ -493,12 +534,12 @@ export function Home() {
               </h2>
               <p className="text-slate-500 leading-relaxed mb-6">
                 质能达微电子成立于 2015 年，总部位于深圳，是国家高新技术企业、
-                国家专精特新「小巨人」企业。公司专注于模拟与混合信号集成电路的研发与销售，
+                国家级专精特新企业。公司专注于模拟与混合信号集成电路的研发与销售，
                 产品广泛应用于消费电子、物联网、新能源汽车等多个高速增长市场。
               </p>
               <p className="text-slate-500 leading-relaxed mb-8">
                 凭借深厚的模拟设计功底与快速迭代能力，质能达已累计推出 50+ 款产品，
-                服务 100+ 合作客户，并积极推进科创板上市进程，
+                服务 100+ 合作客户，A+轮融资正在进行中，
                 致力于成为全球领先的模拟芯片供应商。
               </p>
 
@@ -506,8 +547,8 @@ export function Home() {
                 {[
                   "模拟与混合信号芯片国家高新企业",
                   "自主核心 IP，130+ 芯片专利",
-                  "AEC-Q100 车规级产品认证",
-                  "研发投入占营收比超 22%",
+                  "集成电路布图专利4项",
+                  "对标德州仪器、英飞凌实现国产替代",
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 size={18} className="text-cyan-600 flex-shrink-0" />
@@ -605,7 +646,7 @@ export function Home() {
                   质能达的腾飞
                 </h2>
                 <p className="text-slate-500 leading-relaxed mb-8">
-                  质能达正积极推进科创板 IPO，以高速增长的业绩和扎实的技术壁垒，
+                  质能达A+轮融资正在进行中，以高速增长的业绩和扎实的技术壁垒，
                   致力于为投资者创造长期可持续的价值回报。
                 </p>
                 <Link

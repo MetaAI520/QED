@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router";
 import { motion } from "motion/react";
 import { Lightbulb, Battery, Cpu, Radio, Heart, Building2, ArrowRight, CheckCircle2 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -128,7 +129,16 @@ const solutions = [
 
 export function Solutions() {
   const [active, setActive] = useState("led-landscape");
+  const location = useLocation();
   const sol = solutions.find((s) => s.id === active)!;
+
+  useEffect(() => {
+    const hash = location.hash?.replace("#", "");
+    if (hash && solutions.some((s) => s.id === hash)) {
+      setActive(hash);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location.hash]);
 
   return (
     <div>

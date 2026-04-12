@@ -5,12 +5,12 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 const timeline = [
   { year: "2015", event: "质能达微电子在深圳成立，专注模拟与混合信号芯片研发" },
   { year: "2017", event: "推出首款 QED-LDO 系列产品，进入消费电子市场，获天使轮融资" },
-  { year: "2019", event: "DC-DC 转换器系列量产，完成 A 轮融资，研发团队扩张至 30 人" },
+  { year: "2019", event: "DC-DC 转换器系列量产，研发团队扩张至 30 人" },
   { year: "2021", event: "PMIC 旗舰产品进入头部手机品牌供应链，营收突破 1 亿元" },
-  { year: "2022", event: "完成 B 轮融资，开始布局车规级产品线" },
-  { year: "2023", event: "车规 BMS 通过 AEC-Q100 认证，获评国家高新技术企业" },
-  { year: "2024", event: "完成 B+ 轮战略融资，估值突破 100 亿元，启动科创板上市筹备" },
-  { year: "2026", event: "正式启动 IPO 进程，迈向资本市场新征程" },
+  { year: "2022", event: "开始布局车规级产品线，获评国家高新技术企业" },
+  { year: "2023", event: "车规 BMS 产品研发取得突破，获评国家级专精特新企业" },
+  { year: "2024", event: "完成A轮融资，启动A+轮融资进程" },
+  { year: "2026", event: "推进A+轮融资，加速产品市场化" },
 ];
 
 const values = [
@@ -42,31 +42,31 @@ const values = [
 
 const leadership = [
   {
-    name: "张国华 博士",
-    nameEn: "Dr. Zhang Guohua",
-    position: "创始人 & CEO",
-    bio: "电子工程博士，模拟电路领域资深专家。曾任职于德州仪器（TI）亚太区首席模拟设计工程师，拥有 20 年模拟芯片设计经验，主导研发多款行业标杆产品，持有 60 余项发明专利。",
+    name: "林丰成 博士",
+    nameEn: "Dr. Lin Fengcheng",
+    position: "Chairman",
+    bio: "俄罗斯自然科学院外籍院士，国家特聘专家。清华大学毕业，美国加州大学电子工程与计算机系硕士、物理系博士。具有30年半导体芯片设计经验，拥有国内外130多项专利。",
     color: "from-cyan-500 to-blue-600",
   },
   {
-    name: "李文博 博士",
-    nameEn: "Dr. Li Wenbo",
-    position: "首席技术官 CTO",
-    bio: "清华大学微电子学博士，前 Maxim 半导体中国 CTO。深耕 BCD 工艺和高精度模拟设计领域 18 年，主持建立质能达核心技术平台，是公司最重要的技术领军人物。",
+    name: "高秉强 博士",
+    nameEn: "Dr. Gao Bingqiang",
+    position: "执行董事",
+    bio: "美国柏克莱加州大学硕士和博士学位。曾任香港科技大学工学院院长。IEEE固体电路大奖获得者，拥有六项专利，200篇研究著作。",
     color: "from-violet-500 to-purple-600",
   },
   {
-    name: "王晓明",
-    nameEn: "Wang Xiaoming",
-    position: "首席财务官 CFO",
-    bio: "北京大学光华管理学院 MBA，注册会计师（CPA）。曾任职于多家 A 股上市半导体公司 CFO，深厚的资本市场运营经验，主导推进质能达科创板 IPO 工作。",
+    name: "邓小群 女士",
+    nameEn: "Deng Xiaoqun",
+    position: "COO / 执行董事",
+    bio: "深圳市国家领军高层次人才A类。中国人民大学EMBA研究生，澳大利亚阳光海岸大学硕士。具有近20年国内外电子产品销售经验。",
     color: "from-emerald-500 to-teal-600",
   },
   {
-    name: "陈丽华",
-    nameEn: "Chen Lihua",
-    position: "首席营销官 CMO",
-    bio: "复旦大学电子工程硕士，拥有 15 年半导体销售与市场经验。深度布局消费电子、IoT 及汽车电子渠道，带领质能达产品快速进入主流品牌供应链。",
+    name: "林浩 先生",
+    nameEn: "Lin Hao",
+    position: "研发副总经理",
+    bio: "深圳市国家领军人才B类。西北工业大学电子信息工程系毕业，曾在华为中研硬件设计部从事芯片研发。拥有几十篇发明专利，参与了几十款芯片的研发及流片。",
     color: "from-orange-500 to-amber-600",
   },
 ];
@@ -79,6 +79,7 @@ const honors = [
   { title: "龙华区中小微企业100强", org: "龙华区政府", year: "2021" },
   { title: "2020年中国国家专利发明奖", org: "国家知识产权局", year: "2020" },
   { title: "知识产权贯标证书", org: "国家知识产权局", year: "2021" },
+  { title: "留学生创业补贴一等奖", org: "深圳市人力资源和社会保障局", year: "2022" },
   { title: "集成电路布图专利4项", org: "国家知识产权局", year: "2022" },
 ];
 
@@ -182,7 +183,7 @@ export function About() {
               <p className="text-slate-500 leading-relaxed mb-8">
                 凭借拥有博士、多位硕士为骨干的研发团队、130 多项芯片专利、
                 50+ 款产品型号及 100+ 合作客户，质能达已跻身中国模拟芯片设计领域领先梯队，
-                并积极推进科创板上市进程，致力于进一步扩大规模、提升全球竞争力。              </p>
+                致力于进一步扩大规模、提升全球竞争力。              </p>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
