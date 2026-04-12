@@ -161,7 +161,8 @@ export function Investors() {
         </div>
       </section>
 
-      {/* Financial Performance */}
+      {/* 财务业绩 - 暂时隐藏，以后可能会用 */}
+      {/*
       <section className="py-14 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -216,6 +217,7 @@ export function Investors() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Financing Progress */}
       <section className="py-14 bg-gradient-to-b from-slate-50 to-white">
@@ -270,7 +272,8 @@ export function Investors() {
         </div>
       </section>
 
-      {/* Reports & Filings */}
+      {/* 财务报告 - 暂时隐藏，以后可能会用 */}
+      {/*
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -317,6 +320,7 @@ export function Investors() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Announcements */}
       <section className="py-14 bg-gradient-to-b from-white to-slate-50">
@@ -361,7 +365,8 @@ export function Investors() {
         </div>
       </section>
 
-      {/* Corporate Governance */}
+      {/* 公司治理 - 暂时隐藏，以后可能会用 */}
+      {/*
       <section className="py-14 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -391,6 +396,7 @@ export function Investors() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Contact IR */}
       <section className="py-14 bg-gradient-to-r from-cyan-50 to-blue-50">
@@ -409,7 +415,7 @@ export function Investors() {
             <div className="space-y-4 text-lg">
               <p>
                 <span className="text-slate-500">电话：</span>
-                <span className="text-cyan-600">+86 (0)21 XXXX XXXX</span>
+                <span className="text-cyan-600">15907559811</span>
               </p>
               <p>
                 <span className="text-slate-500">邮箱：</span>

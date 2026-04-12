@@ -102,12 +102,28 @@ const solutions = [
       "https://images.unsplash.com/photo-1674269161229-165040284030?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMGNpdHklMjBJb1QlMjBjb25uZWN0ZWQlMjBkZXZpY2VzJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzU2NTE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
+    id: "sensor",
+    name: "传感器应用",
+    nameEn: "Sensor Applications",
+    desc: "高精度传感器芯片，对标TI/英飞凌，实现国产替代",
+    image:
+      "https://images.unsplash.com/photo-1763543007050-4dac73ffc67f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMHZlaGljbGUlMjBFViUyMGJhdHRlcnklMjBjaGFyZ2luZyUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzc1NjUxODM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+  },
+  {
     id: "medical",
     name: "医疗电子",
     nameEn: "Medical Electronics",
     desc: "传感器与MEMS芯片赋能便携式医疗设备与超声诊断",
     image:
       "https://images.unsplash.com/photo-1695668548342-c0c1ad479aee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwZGF0YSUyMGNlbnRlciUyMHNlcnZlcnN8ZW58MXx8fHwxNzc1NjUxODM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+  },
+  {
+    id: "smart-city",
+    name: "智慧城市",
+    nameEn: "Smart City",
+    desc: "LED照明控制+传感器网络+电源管理，万级节点互联互通",
+    image:
+      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8Y2l0eSUyMHNreWxpbmUlMjBuaWdodHxlbnwwfHx8fDE3MTI5MzI4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
 ];
 
@@ -286,7 +302,7 @@ export function Home() {
               transition={{ duration: 1, delay: 0.5 }}
               className="hidden lg:flex items-center justify-center relative"
             >
-              <div className="relative w-full max-w-md">
+              <div className="relative w-full max-w-lg">
                 {/* Glow ring */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-full blur-3xl" />
                 <ImageWithFallback
@@ -386,7 +402,7 @@ export function Home() {
                 APPLICATION SOLUTIONS
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900">
-                赋能四大
+                赋能六大
                 <br />
                 核心场景
               </h2>

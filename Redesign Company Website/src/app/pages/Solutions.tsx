@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router";
+import { useLocation, Link } from "react-router";
 import { motion } from "motion/react";
 import { Lightbulb, Battery, Cpu, Radio, Heart, Building2, ArrowRight, CheckCircle2 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -123,7 +123,7 @@ const solutions = [
     products: ["LED照明控制 + 传感器网络 + 电源管理综合方案"],
     metrics: "节能40% / 万级节点 / 远程管控",
     image:
-      "https://images.unsplash.com/photo-1704026437278-77f1db74859c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaWNyb2NoaXAlMjBjaXJjdWl0JTIwYm9hcmQlMjBjbG9zZSUyMHVwfGVufDF8fHx8MTc3NTY1MTgzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8Y2l0eSUyMHNreWxpbmUlMjBuaWdodHxlbnwwfHx8fDE3MTI5MzI4MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
 ];
 
@@ -249,12 +249,12 @@ export function Solutions() {
                 </div>
 
                 <div className="mt-8">
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contact"
                     className={`inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r ${sol.color} rounded-xl text-sm font-semibold text-white hover:opacity-90 transition-all`}
                   >
                     获取完整解决方案 <ArrowRight size={16} />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -332,12 +332,12 @@ export function Solutions() {
             <p className="text-slate-500 mb-8">
               质能达提供定制化 ASIC 设计服务，我们的专家团队将为您量身定制解决方案。
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:opacity-90 transition-all"
             >
               联系应用工程师 <ArrowRight size={18} />
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

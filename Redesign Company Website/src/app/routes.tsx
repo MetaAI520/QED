@@ -8,6 +8,7 @@ import { RnD } from "./pages/RnD";
 import { News } from "./pages/News";
 import { Investors } from "./pages/Investors";
 import { Contact } from "./pages/Contact";
+import { Careers } from "./pages/Careers";
 
 export const router = createHashRouter([
   {
@@ -22,6 +23,7 @@ export const router = createHashRouter([
       { path: "news", Component: News },
       { path: "investors", Component: Investors },
       { path: "contact", Component: Contact },
+      { path: "careers", Component: Careers },
     ],
   },
 ]);

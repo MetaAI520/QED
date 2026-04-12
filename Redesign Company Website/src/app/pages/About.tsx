@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router";
 import { Target, Lightbulb, Award, Users, Globe, Zap, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
@@ -47,13 +48,15 @@ const leadership = [
     position: "Chairman",
     bio: "俄罗斯自然科学院外籍院士，国家特聘专家。清华大学毕业，美国加州大学电子工程与计算机系硕士、物理系博士。具有30年半导体芯片设计经验，拥有国内外130多项专利。",
     color: "from-cyan-500 to-blue-600",
+    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/img/20230113_164413_1001.jpg",
   },
   {
-    name: "高秉强 博士",
-    nameEn: "Dr. Gao Bingqiang",
-    position: "执行董事",
-    bio: "美国柏克莱加州大学硕士和博士学位。曾任香港科技大学工学院院长。IEEE固体电路大奖获得者，拥有六项专利，200篇研究著作。",
+    name: "常菲亚 博士",
+    nameEn: "Dr. Chang Feiya",
+    position: "董事总经理",
+    bio: "AI商业化专家，负责公司整体运营管理与战略规划。在人工智能与半导体行业拥有丰富的商业化经验，推动质能达产品市场化进程。",
     color: "from-violet-500 to-purple-600",
+    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/img/20230113_164413_1002.jpg",
   },
   {
     name: "邓小群 女士",
@@ -61,6 +64,7 @@ const leadership = [
     position: "COO / 执行董事",
     bio: "深圳市国家领军高层次人才A类。中国人民大学EMBA研究生，澳大利亚阳光海岸大学硕士。具有近20年国内外电子产品销售经验。",
     color: "from-emerald-500 to-teal-600",
+    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/img/20230113_164413_1003.jpg",
   },
   {
     name: "林浩 先生",
@@ -68,6 +72,7 @@ const leadership = [
     position: "研发副总经理",
     bio: "深圳市国家领军人才B类。西北工业大学电子信息工程系毕业，曾在华为中研硬件设计部从事芯片研发。拥有几十篇发明专利，参与了几十款芯片的研发及流片。",
     color: "from-orange-500 to-amber-600",
+    photo: "http://cdn057.yun-img.com/static/upload/qedmicro/img/20230113_164413_1004.jpg",
   },
 ];
 
@@ -303,10 +308,12 @@ export function About() {
                 viewport={{ once: true }}
                 className="p-6 bg-white shadow-sm rounded-2xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all"
               >
-                <div
-                  className={`w-16 h-16 bg-gradient-to-br ${leader.color} rounded-2xl flex items-center justify-center mb-4`}
-                >
-                  <Users size={28} />
+                <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 border border-slate-200">
+                  <ImageWithFallback
+                    src={leader.photo}
+                    alt={leader.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-lg font-bold mb-0.5 text-slate-900">{leader.name}</h3>
                 <div className="text-xs text-slate-400 font-mono mb-2">{leader.nameEn}</div>
@@ -318,7 +325,7 @@ export function About() {
         </div>
       </section>
 
-      {/* Honors & Certifications */}
+      {/* Advisory Board */}
       <section className="py-14 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -328,36 +335,67 @@ export function About() {
             className="text-center mb-14"
           >
             <div className="text-xs tracking-widest uppercase text-cyan-500 font-semibold mb-3">
-              HONORS & CERTIFICATIONS
+              ADVISORY BOARD
             </div>
-            <h2 className="text-4xl font-black mb-3 text-slate-900">荣誉资质</h2>
-            <p className="text-slate-500">权威认证彰显质能达的技术实力与行业地位</p>
+            <h2 className="text-4xl font-black mb-3 text-slate-900">行业顾问团队</h2>
+            <p className="text-slate-500">汇聚国内外顶尖学者与行业专家，为质能达提供战略指导</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
-            {honors.map((honor, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                name: "高秉强 博士",
+                nameEn: "Dr. Philip Ko",
+                title: "首席科学顾问",
+                bio: "美国柏克莱加州大学硕士和博士学位。曾任香港科技大学工学院院长。IEEE固体电路大奖获得者，拥有六项专利，200篇研究著作。",
+              },
+              {
+                name: "陈春章 博士",
+                nameEn: "Dr. Chen Chunzhang",
+                title: "技术顾问",
+                bio: "半导体行业资深专家，在集成电路设计与制造领域拥有数十年经验，为质能达提供工艺与设计方向指导。",
+              },
+              {
+                name: "苏哲峰 先生",
+                nameEn: "Su Zhefeng",
+                title: "产业顾问",
+                bio: "深耕半导体产业多年，在芯片市场策略、供应链管理等方面拥有丰富经验，助力质能达市场拓展。",
+              },
+              {
+                name: "TIMOTHY LEE",
+                nameEn: "Timothy Lee",
+                title: "国际顾问",
+                bio: "具有丰富的国际半导体行业经验，为质能达的全球化战略与国际市场拓展提供专业建议。",
+              },
+              {
+                name: "金鹏 博士",
+                nameEn: "Dr. Jin Peng",
+                title: "技术顾问",
+                bio: "在模拟与混合信号芯片设计领域拥有深厚学术背景与产业经验，为质能达核心技术研发提供指导。",
+              },
+            ].map((advisor, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.07 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-5 bg-white shadow-sm rounded-2xl border border-slate-200 flex items-center gap-4 hover:border-yellow-500 hover:bg-slate-50 transition-all"
+                className="p-6 bg-white shadow-sm rounded-2xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Award size={22} />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                  <Users size={24} />
                 </div>
-                <div>
-                  <div className="font-bold text-sm mb-0.5 text-slate-900">{honor.title}</div>
-                  <div className="text-xs text-slate-400">
-                    {honor.org} · {honor.year}
-                  </div>
-                </div>
+                <h3 className="text-lg font-bold mb-0.5 text-slate-900">{advisor.name}</h3>
+                <div className="text-xs text-slate-400 font-mono mb-2">{advisor.nameEn}</div>
+                <p className="text-cyan-600 text-sm font-semibold mb-3">{advisor.title}</p>
+                <p className="text-slate-500 text-xs leading-relaxed">{advisor.bio}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* 荣誉资质已移至研发创新页面 */}
 
       {/* CTA */}
       <section className="py-14 bg-gradient-to-b from-slate-50 to-white">
@@ -374,18 +412,18 @@ export function About() {
               无论是产品合作、投资咨询还是人才加盟，我们都期待与您的交流
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:opacity-90 transition-all"
               >
                 联系我们 <ArrowRight size={18} />
-              </a>
-              <a
-                href="/investors"
+              </Link>
+              <Link
+                to="/investors"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-100 border border-slate-300 rounded-xl font-semibold text-slate-900 hover:bg-slate-200 transition-all"
               >
                 投资者关系 <ArrowRight size={18} />
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

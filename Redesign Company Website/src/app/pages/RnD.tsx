@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { motion } from "motion/react";
 import {
   FlaskConical,
@@ -16,54 +17,54 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 const techPillars = [
   {
     icon: Cpu,
-    title: "先进 BCD 工艺",
-    titleEn: "Advanced BCD Process",
+    title: "LED电源线载波技术",
+    titleEn: "LED Power Line Communication",
     color: "from-cyan-500 to-blue-600",
-    desc: "质能达基于 0.18μm / 0.13μm BCD（Bipolar-CMOS-DMOS）工艺平台，实现模拟、数字和功率器件的高度单片集成。自研工艺加速套件（PDK+）大幅缩短产品开发周期，支持快速原型验证与量产迭代。",
+    desc: "质能达自主研发的电源线载波通信技术，实现信号与供电一体化传输，无需额外信号线即可实现千级LED节点的全彩点控。广泛应用于城市景观照明、建筑亮化、透明LED屏等场景，大幅降低布线成本与施工复杂度。",
     points: [
-      "0.18μm / 0.13μm BCD 主工艺",
-      "兼容 40nm CMOS 数字工艺",
-      "自研 LDMOS 器件，击穿电压超 700V",
-      "SiP 系统级封装技术，面积缩减 40%",
+      "电源线载波单线传输协议，无需额外信号线",
+      "支持 1000+ 节点全彩 RGB 点控",
+      "256 级灰度，10 万小时超长寿命",
+      "QED3110/512/7210 系列芯片全覆盖",
     ],
   },
   {
     icon: Layers,
-    title: "高精度模拟设计",
-    titleEn: "High-Precision Analog Design",
-    color: "from-violet-500 to-purple-600",
-    desc: "质能达拥有深厚的高精度模拟电路设计积累，核心团队来自业界顶尖半导体公司，在带隙基准、运算放大器、比较器等核心模块拥有数十项自主专利，确保产品在全温度范围内的稳定性和一致性。",
+    title: "BMS高集成度方案",
+    titleEn: "High-Integration BMS Solution",
+    color: "from-emerald-500 to-teal-600",
+    desc: "质能达独创单颗高集成度BMS电池管理芯片，支持2-20节锂电池级联管理，集成电压采样、温度监控、均衡管理及多重安全保护功能于一体，极少外围元器件，为新能源汽车、储能系统、电动工具等提供高可靠性方案。",
     points: [
-      "带隙基准温飘 < ±10ppm/℃",
-      "运放 GBW 最高 200MHz",
-      "ADC 精度达 16-bit 无噪",
-      "PVT 自动校准，量产一致性 ±0.5%",
+      "单芯片高集成度，极少外围元器件",
+      "支持 2~20 节电池级联管理",
+      "过压/过流/过热多重保护，±25mV 精度",
+      "QED1100/1200 系列量产交付",
     ],
   },
   {
     icon: Shield,
-    title: "功能安全设计",
-    titleEn: "Functional Safety",
-    color: "from-emerald-500 to-teal-600",
-    desc: "面对新能源汽车、工业自动化等高可靠性应用的快速增长，质能达系统性地引入 ISO 26262 功能安全设计流程，建立了从需求分析到芯片验证的完整 ASIL 认证能力，推动产品快速进入车规市场。",
+    title: "超声波MEMS+CMOS芯片",
+    titleEn: "Ultrasonic MEMS+CMOS",
+    color: "from-violet-500 to-purple-600",
+    desc: "质能达在国内率先实现超声波MEMS与CMOS工艺的单芯片集成，融合自主研发的AI信号处理算法，打造新一代智能超声波传感芯片。拥有完全自主知识产权，可应用于距离测量、障碍物检测、手势识别、医疗超声成像等领域。",
     points: [
-      "ISO 26262 ASIL-B 认证能力",
-      "AEC-Q100 Grade 0 车规验证",
-      "FMEDA 故障模式分析覆盖率 >99%",
-      "EMC 符合 CISPR 25 Class 5",
+      "MEMS+CMOS 单芯片集成，国内首创",
+      "自主 AI 信号处理算法",
+      "传感器芯片及 AI 算法完全自主知识产权",
+      "应用覆盖测距、检测、手势识别、医疗超声",
     ],
   },
   {
     icon: Zap,
-    title: "系统级封装 SiP",
-    titleEn: "System-in-Package",
+    title: "传感器国产替代",
+    titleEn: "Sensor Domestic Substitution",
     color: "from-orange-500 to-amber-600",
-    desc: "质能达自主开发 SiP 封装平台，将多颗裸片、无源器件整合在单一封装内，实现芯片面积缩减 40%、BOM 减少 60%，有效帮助客户加快上市速度，降低系统成本，提升产品竞争力。",
+    desc: "质能达传感器系列芯片对标德州仪器（TI）、英飞凌等国际大厂，实现高精度信号采集与处理的国产替代。产品覆盖温度、压力、电流、磁场等多种传感应用，具备16-bit高精度ADC、工业级可靠性，助力客户降低供应链风险。",
     points: [
-      "集成最多 8 颗裸片 + 无源器件",
-      "芯片面积节省 40%",
-      "BOM 数量减少 60%",
-      "支持 WLCSP/LGA/QFN 多封装形式",
+      "对标 TI/英飞凌，Pin-to-Pin 替代",
+      "16-bit 高精度 ADC，低功耗设计",
+      "QED6100/6200/6300/6400 四大系列",
+      "覆盖工业控制、汽车电子、消费类电子",
     ],
   },
 ];
@@ -226,7 +227,8 @@ export function RnD() {
         </div>
       </section>
 
-      {/* Technology Roadmap */}
+      {/* 技术路线图 - 暂时隐藏，以后可能会用 */}
+      {/*
       <section className="py-14 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -292,8 +294,10 @@ export function RnD() {
           </div>
         </div>
       </section>
+      */}
 
-      {/* R&D Centers */}
+      {/* 研发中心 - 暂时隐藏，以后可能会用 */}
+      {/*
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -334,6 +338,7 @@ export function RnD() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Patent Showcase */}
       <section className="py-14 bg-gradient-to-b from-white to-slate-50">
@@ -402,7 +407,7 @@ export function RnD() {
         </div>
       </section>
 
-      {/* Awards */}
+      {/* Awards & Honors - 整合荣誉资质 */}
       <section className="py-14 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -411,42 +416,82 @@ export function RnD() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-4xl font-black mb-3 text-slate-900">荣誉认可</h2>
-            <p className="text-slate-500">行业权威机构对质能达技术实力的高度认可</p>
+            <div className="text-xs tracking-widest uppercase text-cyan-500 font-semibold mb-3">
+              HONORS & CERTIFICATIONS
+            </div>
+            <h2 className="text-4xl font-black mb-3 text-slate-900">荣誉资质</h2>
+            <p className="text-slate-500">权威认证彰显质能达的技术实力与行业地位</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {/* 荣誉列表 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto mb-12">
             {[
-              {
-                award: "国家级专精特新「小巨人」",
-                org: "工业和信息化部",
-                year: "2024",
-              },
-              {
-                award: "中国芯片设计年度创新奖",
-                org: "中国半导体行业协会",
-                year: "2023",
-              },
-              {
-                award: "广东省科学技术进步奖",
-                org: "广东省人民政府",
-                year: "2022",
-              },
-            ].map((item, i) => (
+              { title: "国家高新技术企业", org: "科学技术部", year: "2020" },
+              { title: "国家级专精特新", org: "工业和信息化部", year: "2023" },
+              { title: "深圳市高新技术企业", org: "深圳市科技创新委员会", year: "2019" },
+              { title: "中国创新创业大奖赛深圳总决赛亚军", org: "深圳市人民政府", year: "2018" },
+              { title: "龙华区中小微企业100强", org: "龙华区政府", year: "2021" },
+              { title: "2020年中国国家专利发明奖", org: "国家知识产权局", year: "2020" },
+              { title: "知识产权贯标证书", org: "国家知识产权局", year: "2021" },
+              { title: "留学生创业补贴一等奖", org: "深圳市人力资源和社会保障局", year: "2022" },
+              { title: "集成电路布图专利4项", org: "国家知识产权局", year: "2022" },
+            ].map((honor, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.07 }}
                 viewport={{ once: true }}
-                className="p-6 bg-white shadow-sm rounded-2xl border border-slate-200 text-center hover:border-yellow-500 transition-all"
+                className="p-5 bg-white shadow-sm rounded-2xl border border-slate-200 flex items-center gap-4 hover:border-yellow-500 hover:bg-slate-50 transition-all"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Award size={24} />
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Award size={22} />
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-slate-900">{item.award}</h3>
-                <div className="text-sm text-slate-500 mb-1">{item.org}</div>
-                <div className="text-xs text-slate-400">{item.year} 年</div>
+                <div>
+                  <div className="font-bold text-sm mb-0.5 text-slate-900">{honor.title}</div>
+                  <div className="text-xs text-slate-400">{honor.org} · {honor.year}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* 荣誉证书图片展示 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h3 className="text-2xl font-bold text-slate-900 mb-2">荣誉证书</h3>
+            <p className="text-slate-500 text-sm">部分荣誉证书展示</p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            {[
+              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_2614.jpg", alt: "国家高新技术企业证书" },
+              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_8498.jpg", alt: "专精特新企业证书" },
+              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_3498.jpg", alt: "创新创业大赛获奖证书" },
+              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_5765.jpg", alt: "知识产权贯标证书" },
+              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_7765.jpg", alt: "龙华区100强证书" },
+              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_9765.jpg", alt: "专利发明奖证书" },
+              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164413_1765.jpg", alt: "留学生创业补贴证书" },
+              { src: "http://cdn057.yun-img.com/static/upload/qedmicro/album/20230113_164414_2614.jpg", alt: "集成电路布图专利证书" },
+            ].map((cert, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.05 }}
+                viewport={{ once: true }}
+                className="rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md hover:border-yellow-500 transition-all bg-white"
+              >
+                <ImageWithFallback
+                  src={cert.src}
+                  alt={cert.alt}
+                  className="w-full h-40 object-cover"
+                />
+                <div className="p-2 text-center">
+                  <span className="text-xs text-slate-500">{cert.alt}</span>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -467,12 +512,12 @@ export function RnD() {
             <p className="text-slate-500 mb-8">
               我们正在寻找充满热情的模拟电路工程师，与我们共同突破技术边界
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/careers"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:opacity-90 transition-all"
             >
               查看研发岗位 <ArrowRight size={18} />
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

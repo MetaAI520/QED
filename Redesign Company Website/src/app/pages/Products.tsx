@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router";
+import { useLocation, Link } from "react-router";
 import { motion } from "motion/react";
 import { Zap, Cpu, Lightbulb, Battery, Monitor, Radio, CheckCircle2, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -343,12 +343,12 @@ export function Products() {
                 <h3 className="font-bold text-lg mb-2 text-slate-900">寻求定制方案？</h3>
                 <p className="text-slate-500 text-sm mb-4">
                   我们的应用工程师团队可为您提供专业选型建议和完整参考设计。                </p>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className={`inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r ${activeProduct.color} rounded-xl text-sm font-semibold text-white hover:opacity-90 transition-all`}
                 >
                   联系技术专家 <ArrowRight size={16} />
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -412,18 +412,18 @@ export function Products() {
             <p className="text-slate-500 mb-8">
               注册成为质能达合作客户，即可申请免费样品并下载完整技术文档。            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:opacity-90 transition-all"
               >
                 申请样品
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-slate-100 border border-slate-300 rounded-xl font-semibold text-slate-600 hover:bg-slate-200 transition-all"
               >
                 下载数据手册
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
