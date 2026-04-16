@@ -298,7 +298,7 @@ export function Layout() {
           {/* Bottom Bar */}
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-slate-500">
-              © 2026 深圳市质能达微电子科技有限公司 · 版权所有 · 粤ICP备XXXXXXXX号
+              © 2026 深圳市质能达微电子科技有限公司 · 版权所有
             </p>
             <div className="flex items-center gap-6 text-xs text-slate-500">
               <a href="#" className="hover:text-slate-300 transition-colors">隐私政策</a>
