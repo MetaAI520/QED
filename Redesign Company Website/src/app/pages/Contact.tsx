@@ -34,10 +34,39 @@ export function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // 在 https://formspree.io 注册后，将 YOUR_FORM_ID 替换为你的表单 ID
+  const FORMSPREE_ID = "YOUR_FORM_ID";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError("");
+
+    try {
+      if (FORMSPREE_ID === "YOUR_FORM_ID") {
+        // 演示模式：未配置 Formspree 时模拟成功
+        await new Promise((r) => setTimeout(r, 800));
+        setSubmitted(true);
+      } else {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: JSON.stringify(form),
+        });
+        if (res.ok) {
+          setSubmitted(true);
+        } else {
+          throw new Error("发送失败");
+        }
+      }
+    } catch {
+      setError("提交失败，请直接发送邮件至 info@qedmicro.com");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputClass =
@@ -197,12 +226,19 @@ export function Contact() {
                     </span>
                   </div>
 
+                  {error && (
+                    <p className="text-sm text-red-500 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+                      {error}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-lg text-white hover:opacity-90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25"
+                    disabled={submitting}
+                    className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-lg text-white hover:opacity-90 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send size={20} />
-                    提交咨询
+                    {submitting ? "提交中..." : "提交咨询"}
                   </button>
                 </form>
               )}
