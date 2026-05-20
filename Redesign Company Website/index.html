@@ -56,18 +56,22 @@
 
       <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
       <script>
-        // GitHub Pages SPA 路径还原：将 404.html 编码的 ?p=/about 还原为真实路径
+        // GitHub Pages SPA 路径还原（兼容 IE11 / 旧版浏览器，不使用 URLSearchParams）
         (function(l) {
-          var params = new URLSearchParams(l.search);
-          var p = params.get('p');
-          if (p) {
-            var q = params.get('q');
-            window.history.replaceState(
-              null, null,
-              p.replace(/~and~/g, '&') +
-              (q ? '?' + q.replace(/~and~/g, '&') : '') +
-              l.hash
-            );
+          var search = l.search;
+          if (search.indexOf('?p=') === 0 || search.indexOf('&p=') !== -1) {
+            var p = '', q = '';
+            var pairs = search.slice(1).split('&');
+            for (var i = 0; i < pairs.length; i++) {
+              var kv = pairs[i].split('=');
+              var key = kv[0];
+              var val = decodeURIComponent(kv.slice(1).join('=')).replace(/~and~/g, '&');
+              if (key === 'p') p = val;
+              else if (key === 'q') q = val;
+            }
+            if (p) {
+              window.history.replaceState(null, null, p + (q ? '?' + q : '') + l.hash);
+            }
           }
         }(window.location));
       </script>
