@@ -4,11 +4,13 @@
   <meta charset="UTF-8" />
   <title>质能达微电子 | QED Micro</title>
   <script>
-    // GitHub Pages SPA 重定向：将路径编码后跳回首页，由 React Router 接管
-    var seg = 1;
+    // GitHub Pages SPA 重定向
+    // seg=0 表示没有子路径前缀（自定义域名直接挂根路径）
+    var seg = 0;
     var l = window.location;
     l.replace(
-      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + l.pathname.split('/').slice(0, 1 + seg).join('/') + '/?p=/' +
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + seg).join('/') + '/?p=/' +
       l.pathname.slice(1).split('/').slice(seg).join('/').replace(/&/g, '~and~') +
       (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
       l.hash
