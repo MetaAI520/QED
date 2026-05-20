@@ -124,6 +124,7 @@ function NavDropdown({ item }: { item: (typeof navLinks)[number] }) {
 
 export function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -157,6 +158,7 @@ export function Layout() {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    setExpandedMobileItem(null);
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
@@ -210,33 +212,67 @@ export function Layout() {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div ref={mobileMenuRef} className="lg:hidden py-4 border-t border-slate-200 space-y-1">
-              {navLinks.map((link, idx) => (
-                <div key={idx}>
-                  <Link
-                    to={link.path}
-                    className={`block py-3 px-2 text-sm font-medium rounded-lg transition-colors ${
-                      location.pathname === link.path
-                        ? "text-cyan-600 bg-cyan-50"
-                        : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                  {"children" in link && link.children && (
-                    <div className="pl-4 space-y-1 mt-1">
-                      {link.children.map((child, cidx) => (
+              {navLinks.map((link, idx) => {
+                const hasChildren = "children" in link && link.children && link.children.length > 0;
+                const isExpanded = expandedMobileItem === link.label;
+                const isActive = location.pathname === link.path;
+
+                return (
+                  <div key={idx}>
+                    {hasChildren ? (
+                      // 有子菜单：点击展开/收起，不跳转
+                      <button
+                        onClick={() => setExpandedMobileItem(isExpanded ? null : link.label)}
+                        className={`w-full flex items-center justify-between py-3 px-2 text-sm font-medium rounded-lg transition-colors ${
+                          isActive
+                            ? "text-cyan-600 bg-cyan-50"
+                            : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                        }`}
+                      >
+                        <span>{link.label}</span>
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
+                        />
+                      </button>
+                    ) : (
+                      // 无子菜单：直接跳转
+                      <Link
+                        to={link.path}
+                        className={`block py-3 px-2 text-sm font-medium rounded-lg transition-colors ${
+                          isActive
+                            ? "text-cyan-600 bg-cyan-50"
+                            : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+
+                    {/* 子菜单：展开时显示 */}
+                    {hasChildren && isExpanded && (
+                      <div className="pl-4 space-y-1 mt-1 pb-1">
+                        {/* 父级链接 */}
                         <Link
-                          key={cidx}
-                          to={child.path}
-                          className="block py-2 px-2 text-xs text-slate-400 hover:text-slate-600 transition-colors"
+                          to={link.path}
+                          className="block py-2 px-2 text-xs font-medium text-cyan-600 hover:text-cyan-700 transition-colors"
                         >
-                          {child.label}
+                          查看全部 {link.label}
                         </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+                        {link.children!.map((child, cidx) => (
+                          <Link
+                            key={cidx}
+                            to={child.path}
+                            className="block py-2 px-2 text-xs text-slate-500 hover:text-slate-800 hover:bg-slate-50 rounded transition-colors"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
               <div className="pt-4">
                 <Link
                   to="/contact"
