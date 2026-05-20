@@ -1,7 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;700&display=swap');
+/*
+ * 字体加载策略：
+ * 1. 优先使用系统字体（零延迟）
+ * 2. 通过 fonts.font.im（国内镜像）异步加载 Google Fonts
+ * 3. display=swap 确保字体加载期间使用系统字体，不阻塞渲染
+ */
+
+/* 国内可访问的 Google Fonts 镜像，精简字重减少体积 */
+@import url('https://fonts.font.im/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;700&display=swap');
 
 :root {
-  --font-sans: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  /* 系统字体栈作为降级方案，确保百度浏览器/旧设备也能正常显示 */
+  --font-sans: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', system-ui, -apple-system, sans-serif;
 }
 
 body {
